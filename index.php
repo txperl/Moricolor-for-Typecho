@@ -1,0 +1,108 @@
+<?php
+/**
+ * 一片森林，一座木屋，如世外桃源般，静谧、安逸。森林的气息，如梦境般，让人神往。
+ * 如同她的名字一样，给人以一种自然、恬静的文字阅读体验。
+ * 本项目属于 ProjectNatureSimple
+ * @package Moricolor
+ * @author Trii Hsia 
+ * @version v1 Chapter I
+ * @link https://yumoe.com
+ */
+
+if (!defined('__TYPECHO_ROOT_DIR__')) exit;
+ $this->need('header.php');
+ $i=0;
+ ?>
+
+<div id="main" class="container">
+  <div id="main-index" style="display: none;">
+  <?php $totalpages=ceil($this->getTotal() / $this->parameter->pageSize); ?>
+  <?php if($this->is('index') && $this->_currentPage == 1){echo '<h4>記事</h4>';} ?>
+  <?php if($this->is('index') && $this->_currentPage != 1){echo '<h4>記事 · '.$this->_currentPage.' / '.$totalpages.'</h4>';} ?>
+	<?php while($this->next()): ?>
+    <?php
+    require 'config.php';
+    $i=$i+1;
+    $num_qp=$GLOBALS['index_QuickPreview'];
+    if ($i<=$num_qp) {
+      $collapse='collapse in';
+    } else {
+      $collapse='collapse';
+    }
+    ?>
+        <article>
+      <dl class="dl-horizontal">
+        <dt>
+        <a style="color:#34495e;" data-toggle="collapse" href="#<?php echo $i ?>" aria-expanded="false" aria-controls="<?php $this->title() ?>">
+        <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('F j, Y'); ?></time>
+        </a>
+        </dt>
+        <dd><a itemtype="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></span></dd>
+        <dd class="<?php echo $collapse ?>" id="<?php echo $i ?>">
+        <?php echo img_postthumb($this->cid); ?>
+        <small><?php $this->excerpt(200,' ······'); ?></small>
+        </dd>
+      </dl>
+        </article>
+	<?php endwhile; ?>
+  </div>
+
+  <div id="pagenav" class="text-center" style="display: none;">
+    <ul class="pager">
+      <li class="previous">
+        <?php $this->pageLink('<span><i class="fui-arrow-left"></i></span>','next'); ?>
+        <?php if($this->is('index') && $this->_currentPage == $totalpages){echo '<a title="No more..." data-toggle="tooltip"><span><i class="fui-arrow-left"></i></span></a>';} ?>
+      </li>
+
+    <!-- Make dropdown appear above pagination -->
+    <li class="pagination-dropdown dropup">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        Pages
+      </a>
+      <!-- Dropdown menu -->
+      <ul class="dropdown-menu dropdown-menu-inverse" style="margin-bottom:15px;">
+        <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+        <?php while($pages->next()): ?>
+          <li><a href="<?php $pages->permalink(); ?>"><?php $pages->title(); ?></a></li>
+        <?php endwhile; ?>
+      </ul>
+    </li>
+
+      <li class="next">
+        <?php $this->pageLink('<span><i class="fui-arrow-right"></i></span>'); ?>
+        <?php if($this->is('index') && $this->_currentPage == 1){echo '<a title="No more..." data-toggle="tooltip"><span><i class="fui-arrow-right"></i></span></a>';} ?>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <div id="bottomtools" style="display: none;">
+  <?php
+  $ifrun=$GLOBALS['bottomTools'];
+    if ($ifrun=='on') {
+      echo '<h6>(ฅ´ω`ฅ)</h6><small><ul>';
+      echo '<section style="margin: 10px;">';
+        if ($GLOBALS['bottomTools_hitokoto']=='on') {
+          echo '<div id="hitokoto">一言 Hitokoto</div>';
+        }
+        if ($GLOBALS['bottomTools_category']=='on') {
+          echo '<span style="padding-right: 1px;">Category</span> · &nbsp;';
+            $this->widget('Widget_Metas_Category_List')
+                ->parse('<a style="color:#95A5A6;" href="{permalink}"> &{name} </a>&nbsp; · &nbsp;');
+        }
+      echo '</section>';
+      echo '</ul>';
+        //
+        if ($GLOBALS['bottomTools_search']=='on') {
+          echo '<form method="post">';
+          echo '<input autocomplete="off" name="s" type="text" class="form-control input-sm" placeholder="Search anything here~" />';
+          echo '</form>';
+        }
+      echo '</small>';
+    }
+  ?>
+  </div>
+</div>
+
+<?php $this->need('footer.php'); ?>
