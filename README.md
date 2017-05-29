@@ -16,9 +16,9 @@ Demo: [森の色](https://yumoe.com/)
 #### 预览图
 ![home](https://dn-loliamp.qbox.me/image/blog/FireShot%20Capture%207%20-%20%E6%A3%AE%E3%81%AE%E8%89%B2%20-%20https___yumoe.com_.png)
 
-https://dn-loliamp.qbox.me/image/blog/FireShot%20Capture%208%20-%20%E6%A3%AE%E3%81%AE%E8%89%B2%20-%20https___yumoe.com_.png
+[Home2](https://dn-loliamp.qbox.me/image/blog/FireShot%20Capture%208%20-%20%E6%A3%AE%E3%81%AE%E8%89%B2%20-%20https___yumoe.com_.png)
 
-https://dn-loliamp.qbox.me/image/blog/FireShot%20Capture%209%20-%20Typecho%20Theme%20Moricolor%20-%20%E6%A3%AE%E4%B9%8B%E8%89%B2%20-%20%E6%A3%AE%E3%81%AE%E8%89%B2%20-%20https___yumoe.com_archives_moricolor.html%20%281%29.png
+[Post](https://dn-loliamp.qbox.me/image/blog/FireShot%20Capture%209%20-%20Typecho%20Theme%20Moricolor%20-%20%E6%A3%AE%E4%B9%8B%E8%89%B2%20-%20%E6%A3%AE%E3%81%AE%E8%89%B2%20-%20https___yumoe.com_archives_moricolor.html%20%281%29.png)
 
 #### 细节
 
