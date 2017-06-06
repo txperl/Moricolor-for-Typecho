@@ -13,7 +13,10 @@
         <?php if ($this->have()): ?>
     	<?php while($this->next()): ?>
             <article class="post">
-                <ul><li><time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('Y/m/d'); ?></time> - <a itemtype="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></li></ul>
+                <div class="arc-t"><div class="arc-tile"><small><a itemtype="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></small>
+                <br>
+                <span class="arc-date"><time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('M j, Y'); ?></time></span>
+                </div></div>
     		</article>
     	<?php endwhile; ?>
         <?php else: ?>

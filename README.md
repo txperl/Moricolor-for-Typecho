@@ -6,7 +6,6 @@
 > 预计发布 Typecho,WordPress 版本，目前前者已基本完成，后者预计暑假中期发布。
 > 你现在看到的只是此版本的提前预览版本，请待发布。
 
-Demo: [森の色](https://yumoe.com/)
 
 ----------
 
@@ -37,10 +36,15 @@ Demo: [森の色](https://yumoe.com/)
 $GLOBALS['bottomTools'] = 'on'; //总
 $GLOBALS['bottomTools_hitokoto'] = 'on'; //一言
 $GLOBALS['bottomTools_category'] = 'on'; //分类
+$GLOBALS['bottomTools_tag'] = 'off'; //标签
+$GLOBALS['bottomTools_page'] = 'off'; //页面
 $GLOBALS['bottomTools_search'] = 'on'; //搜索
 
-//主页设置
-$GLOBALS['index_QuickPreview'] = '0'; //默认显示 X 个快速预览
+//主页
+$GLOBALS['index_QuickPreview'] = '1'; //每页默认显示 X 个快速预览
+
+//样式
+$GLOBALS['style_TextIndent'] = 'on'; //首行缩进
 ```
 
 ##### 本主题包含一套 Material Design 图标
@@ -79,6 +83,7 @@ $GLOBALS['index_QuickPreview'] = '0'; //默认显示 X 个快速预览
 
 ##### 其他注意事项
 1.本主题引用了多个本地资源，若是访问速度明显下降，请自行将本地资源上传到CDN或使用其他解决方案
+
 2.更多问题可以询问作者
 
 ----------
@@ -93,11 +98,16 @@ $GLOBALS['index_QuickPreview'] = '0'; //默认显示 X 个快速预览
  - [zoom_vanilla.js][9]
  - [Prism.js][10]
 
-#### 未来
+#### 更新日志
 
- - 花园功能（类似于博主的个人喜好展示地）
- - 更多的独立页面
- - 更好的文字排版
+##### Moricolor v1 Chapter I beta2
+
+ - 全新 归档页面设计
+ - 新增 段落缩进设置
+ - 新增 标签云(归档页面中)
+ - 新增 小工具_Tag,Page
+ - 更改 主页月份显示方式(3个字母简写)
+ - 修复 评论作者信息编辑BUG
 
 #### 写在最后
 

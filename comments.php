@@ -53,7 +53,7 @@ echo $commentClass;
     .ccomment_reply,.comment_meta{font-size:.766rem;margin-top:1rem;color:#aaa}
     .comment_reply{float:right;display:none}
     .comment_main:hover .comment_reply{display:block}
-    .comment_author{padding:.1rem .25rem;border-radius:.25rem;background:#eee;font-size:.715rem}
+    .comment_author{padding:.1rem .25rem;border-radius:.25rem;background:#eee;font-size:10px;}
     .ccomment_reply{text-align: right;}
     .comment_reply a:before,.comment_time:before{margin:0 .5rem}
     .comment-parent>.comment-children{margin-left:1rem;padding-left:40px}
@@ -79,7 +79,7 @@ echo $commentClass;
             <p>已登入<a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout">退出 &raquo;</a></p>
             <?php else: ?>
             <?php if($this->remember('author',true) != "" && $this->remember('mail',true) != "") : ?>
-            <span>欢迎【<?php $this->remember('author'); ?>】的到来 | <small style="cursor: pointer;" onclick = "tg_c('ainfo','hinfo');"> 编辑资料</small></span>
+            <span>欢迎 <?php $this->remember('author'); ?> 的到来 | <small style="cursor: pointer;" onclick="editinfo();"> 编辑资料</small></span>
             <div id ="ainfo" class="ainfo hinfo">
             <?php else : ?>
             <div class="ainfo">
@@ -95,6 +95,13 @@ echo $commentClass;
             <textarea rows="3" name="text" id="textarea" class="form-control flat" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('csubmit').click();return false};" placeholder="在这里输入你的评论" required ><?php $this->remember('text',false); ?></textarea>
             </div>
             <center><button type="submit" class="btn btn-embossed btn-primary" id="csubmit">提交评论 (Ctrl + Enter)</button></center>
+            <?php $security = $this->widget('Widget_Security'); ?>
+            <input type="hidden" name="_" value="<?php echo $security->getToken($this->request->getReferer())?>">
         </form>
+        <script type="text/javascript">
+            function editinfo(){
+                $("#ainfo").fadeIn(800);
+            }
+        </script>
     </div>
 </div>

@@ -5,7 +5,7 @@
  * 本项目属于 ProjectNatureSimple
  * @package Moricolor
  * @author Trii Hsia 
- * @version v1 Chapter I
+ * @version v1 Chapter I beta2
  * @link https://yumoe.com
  */
 
@@ -34,7 +34,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
       <dl class="dl-horizontal">
         <dt>
         <a style="color:#34495e;" data-toggle="collapse" href="#<?php echo $i ?>" aria-expanded="false" aria-controls="<?php $this->title() ?>">
-        <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('F j, Y'); ?></time>
+        <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('M j, Y'); ?></time>
         </a>
         </dt>
         <dd><a itemtype="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></span></dd>
@@ -57,7 +57,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <!-- Make dropdown appear above pagination -->
     <li class="pagination-dropdown dropup">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-        Pages
+        <span class="fui-list"></span>
       </a>
       <!-- Dropdown menu -->
       <ul class="dropdown-menu dropdown-menu-inverse" style="margin-bottom:15px;">
@@ -83,17 +83,40 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     if ($ifrun=='on') {
       echo '<h6>(ฅ´ω`ฅ)</h6><small><ul>';
       echo '<section style="margin: 10px;">';
+      //
+        //一言
         if ($GLOBALS['bottomTools_hitokoto']=='on') {
           echo '<div id="hitokoto">一言 Hitokoto</div>';
         }
+        //分类
         if ($GLOBALS['bottomTools_category']=='on') {
           echo '<span style="padding-right: 1px;">Category</span> · &nbsp;';
             $this->widget('Widget_Metas_Category_List')
                 ->parse('<a style="color:#95A5A6;" href="{permalink}"> &{name} </a>&nbsp; · &nbsp;');
+          echo '<br>';
+        }
+        //标签
+        if ($GLOBALS['bottomTools_tag']=='on') {
+          echo '<span>Tag</span> · &nbsp;';
+          $this->widget('Widget_Metas_Tag_Cloud')->to($tags);
+            while($tags->next()):
+              echo '<a href="'. $tags->permalink .'" style="color:#95A5A6;">'. $tags->name .'</a>&nbsp; · &nbsp;';
+            endwhile;
+          echo '<br>';
+        }
+        //页面
+        if ($GLOBALS['bottomTools_page']=='on') {
+          echo '<span>Page</span> · &nbsp;';
+          $this->widget('Widget_Contents_Page_List')->to($pages);
+            while($pages->next()):
+              echo '<a href="'. $pages->permalink .'" style="color:#95A5A6;">'. $pages->title .'</a>&nbsp; · &nbsp;';
+            endwhile;
+          echo '<br>';
         }
       echo '</section>';
       echo '</ul>';
-        //
+      //
+        //搜索
         if ($GLOBALS['bottomTools_search']=='on') {
           echo '<form method="post">';
           echo '<input autocomplete="off" name="s" type="text" class="form-control input-sm" placeholder="Search anything here~" />';

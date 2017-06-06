@@ -1,4 +1,13 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+
+<?php
+  require_once 'config.php';
+  if ($GLOBALS['style_TextIndent'] == 'on') {
+    echo '<style>';
+      echo '.post-content p,.post-content li{text-indent: 2em;}';
+    echo '</style>';
+  }
+?>
 <!DOCTYPE html>
   <head>
     <meta charset="utf-8">
