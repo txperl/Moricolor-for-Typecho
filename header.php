@@ -20,6 +20,7 @@
         ), '', ' - '); ?><?php $this->options->title(); ?>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php $this->header('keywords=&generator=&template=&pingback=&xmlrpc=&wlw=&commentReply=&rss1=&rss2=&atom='); ?>
 
     <link href="<?php $this->options->themeUrl('./css/mori.css'); ?>" rel="stylesheet">
     <link href="<?php $this->options->themeUrl('./css/vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
