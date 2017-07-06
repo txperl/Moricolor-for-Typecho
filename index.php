@@ -5,8 +5,8 @@
  * 本项目属于 ProjectNatureSimple
  * @package Moricolor
  * @author Trii Hsia 
- * @version v1 Chapter I beta2
- * @link https://yumoe.com
+ * @version v1 Chapter I beta3
+ * @link https://yumoe.com/
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
@@ -61,10 +61,20 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
       </a>
       <!-- Dropdown menu -->
       <ul class="dropdown-menu dropdown-menu-inverse" style="margin-bottom:15px;">
-        <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
-        <?php while($pages->next()): ?>
-          <li><a href="<?php $pages->permalink(); ?>"><?php $pages->title(); ?></a></li>
-        <?php endwhile; ?>
+        <?php if($GLOBALS['tools_Pages_if']=='on'): ?>
+          <?php
+            $pages=$GLOBALS['tools_Pages'];
+            $titles=array_keys($GLOBALS['tools_Pages']);
+            for ($i=0; $i < count($pages); $i++) { 
+              echo '<li><a href="'.$pages[$titles[$i]].'">'.$titles[$i].'</a></li>';
+            }
+          ?>
+        <?php else: ?>
+          <?php $this->widget('Widget_Contents_Page_List')->to($pages); ?>
+          <?php while($pages->next()): ?>
+            <li><a href="<?php $pages->permalink(); ?>"><?php $pages->title(); ?></a></li>
+          <?php endwhile; ?>
+        <?php endif; ?>
       </ul>
     </li>
 
@@ -127,5 +137,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
   ?>
   </div>
 </div>
-
+  <?php if($GLOBALS['beta_MoriGarden']=='on'): ?>
+  <div id="thatsi" style="display:none;"><center><a style="color:#34495e;" href="javascript:void(0)"><i id="getT" class="zmdi zmdi-chevron-down zmdi-hc-2x"></i></a></center></div>
+  <?php endif; ?>
 <?php $this->need('footer.php'); ?>

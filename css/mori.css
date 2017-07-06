@@ -9,12 +9,26 @@ html::-webkit-scrollbar-thumb:hover{background-color:#AAA;} \e641
   letter-spacing: .6px;
   text-align: justify;
 }
-.post-content h4,.post-content h5,.post-content h6{
+.post-content h4 {
   color:#78909c;
   font-weight: normal;
   margin-top: 30px;
   margin-bottom: 20px;
   margin-left: -10px;
+}
+.post-content h5 {
+  color:#78909c;
+  font-weight: normal;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: -3px;
+}
+.post-content h6{
+  color:#78909c;
+  font-weight: normal;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-left: -2px;
 }
 .post-content h4::before{
   font-family: 'Flat-UI-Icons';
@@ -157,4 +171,22 @@ html::-webkit-scrollbar-thumb:hover{background-color:#AAA;} \e641
   .arc-t {
   width:100%;
   }
+}
+.tarc-t {
+  width:90%;
+  position:relative;
+  min-height:1px;
+  padding-right:5px;
+  padding-left:5px;
+}
+.tarc-tile {
+  font-size:14px;
+  position: relative;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(184,197,214,.2);
+  border-radius: 6px;
+  background: #fff;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,.04);
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
 }

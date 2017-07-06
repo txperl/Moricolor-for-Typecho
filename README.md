@@ -13,11 +13,9 @@
 ### Moricolor v1 Chapter I
 
 #### 预览图
-![home](https://dn-loliamp.qbox.me/image/blog/FireShot%20Capture%207%20-%20%E6%A3%AE%E3%81%AE%E8%89%B2%20-%20https___yumoe.com_.png)
-
-[Home2](https://dn-loliamp.qbox.me/image/blog/FireShot%20Capture%208%20-%20%E6%A3%AE%E3%81%AE%E8%89%B2%20-%20https___yumoe.com_.png)
-
-[Post](https://dn-loliamp.qbox.me/image/blog/FireShot%20Capture%209%20-%20Typecho%20Theme%20Moricolor%20-%20%E6%A3%AE%E4%B9%8B%E8%89%B2%20-%20%E6%A3%AE%E3%81%AE%E8%89%B2%20-%20https___yumoe.com_archives_moricolor.html%20%281%29.png)
+![home1](https://dn-loliamp.qbox.me/image/blog/FireShot%20Capture%208%20-%20%E6%A3%AE%E3%81%AE%E8%89%B2%20-%20https___yumoe.com_.png)
+![home2](https://dn-loliamp.qbox.me/image/blog/FireShot%20Capture%207%20-%20%E6%A3%AE%E3%81%AE%E8%89%B2%20-%20https___yumoe.com_.png)
+![post](https://dn-loliamp.qbox.me/image/blog/FireShot%20Capture%209%20-%20Typecho%20Theme%20Moricolor%20-%20%E6%A3%AE%E4%B9%8B%E8%89%B2%20-%20%E6%A3%AE%E3%81%AE%E8%89%B2%20-%20https___yumoe.com_archives_moricolor.html%20%281%29.png)
 
 #### 细节
 
@@ -32,6 +30,13 @@
 // 'on' 为开启
 // 'off'或留空 为关闭
 
+//Pages -换页导航中间的三条杠！
+$GLOBALS['tools_Pages_if'] = 'off'; //是否开启自定义链接
+$GLOBALS['tools_Pages'] = array(
+  '{your_title}' => '{your_url}', 
+  'Moricolor' => 'https://github.com/txperl/Moricolor-for-Typecho'
+  );
+
 //底部小工具
 $GLOBALS['bottomTools'] = 'on'; //总
 $GLOBALS['bottomTools_hitokoto'] = 'on'; //一言
@@ -45,7 +50,25 @@ $GLOBALS['index_QuickPreview'] = '1'; //每页默认显示 X 个快速预览
 
 //样式
 $GLOBALS['style_TextIndent'] = 'on'; //首行缩进
+$GLOBALS['style_CommentShow'] = 'off'; //默认显示评论
+$GLOBALS['style_Color'] = 'normal'; //全局配色设定 | 下个版本开放
+
+//前方有怪兽！
+$GLOBALS['beta_MoriGarden'] = 'on'; //开启后请自行修改 ./MoriGarden/config.php 配置，否则会出事情的！
 ```
+
+##### MoriGarden[Beta]
+MoriGarden是基于Thatsi的一个简单例子
+
+目前包含如下内容：
+
+twitter: 以时间轴顺序，获取对应id(是@后面的名称)的公开推文（墙内也可使用）
+
+bangumi: 以时间轴顺序，获取对应id(是@后面的名称)的在看番剧 （这个应该只有二次元迷会用得到吧，我反正是用了...）
+
+weibo: 以时间轴顺序，获取对应id的公开微博
+
+P.s. 因为测试阶段默认使用我个人注册的API TOKEN,所以请勿随意或恶意提交
 
 ##### 本主题包含一套 Material Design 图标
 位于 './fonts/md'
@@ -99,6 +122,13 @@ $GLOBALS['style_TextIndent'] = 'on'; //首行缩进
  - [Prism.js][10]
 
 #### 更新日志
+
+##### Moricolor v1 Chapter I beta3
+
+ - 测试 Moricolor后花园_基于Thatsi
+ - 新增 默认显示评论设置
+ - 新增 自定义Pages导航设置(换页导航中间的三条杠杠)
+ - 修复 插件无法显示BUG
 
 ##### Moricolor v1 Chapter I beta2
 

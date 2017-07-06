@@ -1,24 +1,22 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-
 <?php
   require_once 'config.php';
   if ($GLOBALS['style_TextIndent'] == 'on') {
     echo '<style>';
       echo '.post-content p,.post-content li{text-indent: 2em;}';
     echo '</style>';
+    echo "\n";
   }
 ?>
 <!DOCTYPE html>
   <head>
     <meta charset="utf-8">
-    <title>
-    <?php $this->archiveTitle(array(
+    <title><?php $this->archiveTitle(array(
             'category'  =>  _t('%s'),
             'search'    =>  _t('%s'),
             'tag'       =>  _t('%s'),
             'author'    =>  _t('%s')
-        ), '', ' - '); ?><?php $this->options->title(); ?>
-    </title>
+        ), '', ' - '); ?><?php $this->options->title(); ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php $this->header('keywords=&generator=&template=&pingback=&xmlrpc=&wlw=&commentReply=&rss1=&rss2=&atom='); ?>
 

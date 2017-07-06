@@ -23,6 +23,7 @@
         if (window.location.hash!='') {
           $("#comments").fadeIn(1000);
         }
+        $("#thatsi").fadeIn(1300); 
         $("#footer").css('display','block'); 
       });
 
@@ -35,7 +36,30 @@
         $('[data-toggle=tooltip]').tooltip();
       });
     </script>
-    
+
+    <?php if($GLOBALS['beta_MoriGarden']=='on'): ?>
+    <script>
+      $(function(){
+        $("#getT").click(function(){
+          $('#thatsi').html("<center><small>loading...</small></center>");
+          $.post( '<?php $this->options->themeUrl('./MoriGarden/getThatsi.php'); ?>', { 'value' : 'done' },function(data){
+          if( data != '' ) 
+            $('#thatsi').html(data).css('display','none');
+            $("#thatsi").fadeIn(400); 
+          });
+        });
+      });
+    </script>
+    <?php endif; ?>
+
+    <?php 
+    if($this->is('post') or $this->is('page')){
+      if ($GLOBALS['style_CommentShow']=='on') {
+        echo '<script>$("#comments").fadeIn(1000);</script>';
+      }
+    }
+    ?>
+
     <?php 
     if($this->is('index')){
       if ($GLOBALS['bottomTools_hitokoto']=='on') {
@@ -48,7 +72,7 @@
     <hr>
     <div style="text-align:center;padding-bottom:9px;">
       <p>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
-    <?php _e('Using <a href="http://www.typecho.org">Typecho</a> & <a href="https://yumoe.com">Moricolor</a>'); ?>.</p>
+    <?php _e('Using <a target="_blank" href="http://www.typecho.org">Typecho</a> & <a target="_blank" href="https://yumoe.com">Moricolor</a>'); ?>.</p>
     </div>
   </footer>
 <?php $this->footer(); ?>
