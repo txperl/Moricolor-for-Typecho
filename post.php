@@ -20,7 +20,7 @@
             <div style="text-align: center;margin-top: 10px;">
                 <div class="post-info">
                     <?php $this->category(' '); ?>
-                    <?php $this->tags(' ', true, 'none'); ?>
+                    <?php $this->tags(' ', true, '<a>no tag</a>'); ?>
                     <a><time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('F j, Y'); ?></time></a>
                 </div>
             </div>
