@@ -4,25 +4,26 @@
 <div id="main" class="container">
     <div id="main-post" role="main" style="display: none;">
         <article class="post" style="padding-top: 20px;">
-            <h2 style="font-weight: normal;"> <?php $this->title() ?></h2>
+            <h2 style="font-weight: normal;text-align: center;"><?php $this->title() ?></h2>
         <?php if($GLOBALS['style_TextBar']=='on'): ?>
             <div class="text-bar">
+                <a href="<?php $this->options->siteUrl(); ?>" class="fui-home"></a>
                 <a id="tor_show" href="javascript:void(0)" class="fui-list-bulleted"></a>
                 <a id="comment_go" href="#comments" class="fui-bubble"></a>
-                <a href="<?php $this->options->siteUrl(); ?>" class="fui-home"></a>
                 <a style="font-size: 30px;margin-left: 1px;">·</a>
                 <a href="https://twitter.com/intent/tweet?url=<?php $this->permalink() ?>" target="_blank" rel="nofollow" data-placement="bottom" data-toggle="tooltip" title="Twitter" class="fui-twitter"></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=<?php $this->permalink() ?>" target="_blank" rel="nofollow" data-placement="bottom" data-toggle="tooltip" title="Facebook" class="fui-facebook"></a>
                 <a href="https://plus.google.com/share?url=<?php $this->permalink() ?>" target="_blank" rel="nofollow"data-placement="bottom" data-toggle="tooltip" title="Google+" class="fui-google-plus"></a>
-                <a href="http://service.weibo.com/share/share.php?url=<?php $this->permalink() ?>" target="_blank" rel="nofollow" data-placement="bottom" data-toggle="tooltip" title="Weibo" class="fui-bookmark"></a>
+                <a href="http://service.weibo.com/share/share.php?url=<?php $this->permalink() ?>&title=<?php $this->title() ?>" target="_blank" rel="nofollow" data-placement="bottom" data-toggle="tooltip" title="Weibo" class="fui-bookmark"></a>
             </div>
         <?php endif; ?>
-            <p class="text-right">
-                <small><?php _e('Category: '); ?><?php $this->category(', '); ?></small><br>
-                <small><?php _e('Tag: '); ?><?php $this->tags(', ', true, 'none'); ?></small><br>
-                <small>Written by <a itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a> with ♥ on <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('F j, Y'); ?></time></small>
-            </p>
-        
+            <div style="text-align: center;margin-top: 10px;">
+                <div class="post-info">
+                    <?php $this->category(' '); ?>
+                    <?php $this->tags(' ', true, 'none'); ?>
+                    <a><time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('F j, Y'); ?></time></a>
+                </div>
+            </div>
             <div class="post-content" itemprop="articleBody">
                 <?php parseContnet($this->content); ?>
             </div>

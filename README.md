@@ -3,20 +3,15 @@
 
 如同她的名字一样，给人以一种自然、恬静的文字阅读体验。
 
-> 预计发布 Typecho,WordPress 版本，目前前者已基本完成，后者预计暑假中期发布。
-> 
-> 你现在看到的只是此版本的提前预览版本，请待发布。
-
+> 你现在看到的只是此版本的提前预览版本，请待正式版发布。
 
 ----------
 
 
-### Moricolor v1 Chapter I
+### Moricolor Chapter I
 
 #### 预览图
-![home1](https://dn-loliamp.qbox.me/image/blog/FireShot%20Capture%208%20-%20%E6%A3%AE%E3%81%AE%E8%89%B2%20-%20https___yumoe.com_.png)
-![home2](https://dn-loliamp.qbox.me/image/blog/FireShot%20Capture%207%20-%20%E6%A3%AE%E3%81%AE%E8%89%B2%20-%20https___yumoe.com_.png)
-![post](https://dn-loliamp.qbox.me/image/blog/FireShot%20Capture%209%20-%20Typecho%20Theme%20Moricolor%20-%20%E6%A3%AE%E4%B9%8B%E8%89%B2%20-%20%E6%A3%AE%E3%81%AE%E8%89%B2%20-%20https___yumoe.com_archives_moricolor.html%20%281%29.png)
+[Home1](https://dn-loliamp.qbox.me/image/blog/FireShot%20Capture%208%20-%20%E6%A3%AE%E3%81%AE%E8%89%B2%20-%20https___yumoe.com_.png) & [Home2](https://dn-loliamp.qbox.me/image/blog/FireShot%20Capture%207%20-%20%E6%A3%AE%E3%81%AE%E8%89%B2%20-%20https___yumoe.com_.png) & [Post](https://dn-loliamp.qbox.me/image/blog/FireShot%20Capture%209%20-%20Typecho%20Theme%20Moricolor%20-%20%E6%A3%AE%E4%B9%8B%E8%89%B2%20-%20%E6%A3%AE%E3%81%AE%E8%89%B2%20-%20https___yumoe.com_archives_moricolor.html%20%281%29.png)
 
 #### 细节
 
@@ -126,6 +121,7 @@ P.s. 因为测试阶段默认使用我个人注册的API TOKEN,所以请勿随�
 #### 更新日志
 ##### Chapter I beta4
 
+ - 全新 文章页面头部样式
  - 新增 TextBar
  - 新增 文章目录导航(仅支持 h3,h4 层级)
  - 优化 评论层级样式

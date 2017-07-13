@@ -9,7 +9,6 @@
             'tag'       =>  _t('Tag: %s'),
             'author'    =>  _t('Author: %s')
         ), '', ''); ?></h4>
-        <ul>
         <?php if ($this->have()): ?>
     	<?php while($this->next()): ?>
             <article class="post">
@@ -25,7 +24,6 @@
                 <h6>表示没有写过这内容唉...</h6>
             </article>
         <?php endif; ?>
-        </ul>
     </div>
 
   <div id="pagenav" class="text-center" style="display: none;">
