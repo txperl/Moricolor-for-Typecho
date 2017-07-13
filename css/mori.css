@@ -4,7 +4,67 @@ html::-webkit-scrollbar{width:8px;height:8px;}
 html::-webkit-scrollbar-thumb{height:40px;background-color:#999;}
 html::-webkit-scrollbar-thumb:hover{background-color:#AAA;} \e641
 */
-.post-content p,.post-content li{
+/* PostTor CSS */
+.post-tor-content {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  margin-right: auto!important;
+  margin-left: auto!important;
+  text-align: right;
+}
+.post-tor {
+  font-size: 12px;
+  position: fixed;
+  z-index: 0;
+  top: 100px;
+  display: inline-block;
+  text-align: left;
+}
+.torarc-t {
+  width:160px;
+  float:left;
+  position:relative;
+  min-height:1px;
+}
+.torarc-tile {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  padding: 14px;
+}
+.tori {
+  font-weight: bold;
+  color: #34495e;
+}
+.torii {
+  margin-left: 2px;
+  color: #5f5f5f;
+}
+.torii::before {
+  font-family: 'Material-Design-Iconic-Font';
+  color:#e8a9a9;
+  margin-right: 4px;
+  content: "#";
+}
+/* end */
+.text-bar {
+  color: #34495e;
+  float: left;
+  margin-left: 1em;
+  margin-top: -6px;
+  margin-bottom: -30px;
+  font-size: 22px;
+}
+.text-bar a {
+  color: #34495e;
+  letter-spacing: 10px;
+}
+.text-bar a:hover,.text-bar a:visited,.text-bar a:focus {
+  color: #34495e;
+}
+.post-content p,.post-content li {
   font-size: 16px;
   letter-spacing: .6px;
   text-align: justify;
@@ -166,11 +226,26 @@ html::-webkit-scrollbar-thumb:hover{background-color:#AAA;} \e641
   .arc-t {
   width:50%;
   }
+  .post-tor-content {
+    display: none;
+  }
+  .text-bar {
+    font-size: 20px;
+  }
 }
 @media (max-width: 768px){
   .arc-t {
   width:100%;
   }
+  .post-tor-content{
+    display: none;
+  }
+  .text-bar {
+    font-size: 18px;
+  }
+  .text-bar a {
+    letter-spacing: 3px;
+}
 }
 .tarc-t {
   width:90%;

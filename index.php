@@ -5,7 +5,7 @@
  * 本项目属于 ProjectNatureSimple
  * @package Moricolor
  * @author Trii Hsia 
- * @version v1 Chapter I beta3
+ * @version Chapter I beta4
  * @link https://yumoe.com/
  */
 

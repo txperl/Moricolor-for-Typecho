@@ -57,6 +57,9 @@ echo $commentClass;
     .ccomment_reply{text-align: right;}
     .comment_reply a:before,.comment_time:before{margin:0 .5rem}
     .comment-parent>.comment-children{margin-left:1rem;padding-left:40px}
+    .comment-child .comment-children {
+        margin-left: 2em;
+    }
     .tbox{padding: 0 0 15px 0px;}
     @media only screen and (max-width:767px){.comment-parent .comment-children{margin-left:0;padding-left:0}}
     </style>

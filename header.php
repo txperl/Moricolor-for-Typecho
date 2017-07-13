@@ -1,4 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+<!DOCTYPE html>
 <?php
   require_once 'config.php';
   if ($GLOBALS['style_TextIndent'] == 'on') {
@@ -8,7 +9,6 @@
     echo "\n";
   }
 ?>
-<!DOCTYPE html>
   <head>
     <meta charset="utf-8">
     <title><?php $this->archiveTitle(array(

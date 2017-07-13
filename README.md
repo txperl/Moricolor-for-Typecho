@@ -4,6 +4,7 @@
 如同她的名字一样，给人以一种自然、恬静的文字阅读体验。
 
 > 预计发布 Typecho,WordPress 版本，目前前者已基本完成，后者预计暑假中期发布。
+> 
 > 你现在看到的只是此版本的提前预览版本，请待发布。
 
 
@@ -20,7 +21,7 @@
 #### 细节
 
  - 点击 **主页的日期** ，可 **快速预览文章**
- - 在文章页面下，只能通过文章结尾处的 **HOME按钮** 返回主页，或是浏览器返回
+ - 在文章页面下，可通过文章结尾处的 **HOME按钮** 返回主页，或是浏览器返回
  - 在其他任何页面下，都是通过 **点击博客标题** 返回主页，或是浏览器返回
 
 #### 一些食用方法
@@ -49,12 +50,13 @@ $GLOBALS['bottomTools_search'] = 'on'; //搜索
 $GLOBALS['index_QuickPreview'] = '1'; //每页默认显示 X 个快速预览
 
 //样式
+$GLOBALS['style_TextBar'] = 'on'; //上边栏及分享按钮 (文章目录导航仅支持 h3,h4 层级)
 $GLOBALS['style_TextIndent'] = 'on'; //首行缩进
 $GLOBALS['style_CommentShow'] = 'off'; //默认显示评论
 $GLOBALS['style_Color'] = 'normal'; //全局配色设定 | 下个版本开放
 
 //前方有怪兽！
-$GLOBALS['beta_MoriGarden'] = 'on'; //开启后请自行修改 ./MoriGarden/config.php 配置，否则会出事情的！
+$GLOBALS['beta_MoriGarden'] = 'off'; //开启后请自行修改 ./MoriGarden/config.php 配置，否则会出事情的！
 ```
 
 ##### MoriGarden[Beta]
@@ -105,9 +107,9 @@ P.s. 因为测试阶段默认使用我个人注册的API TOKEN,所以请勿随�
 为了整体样式的美观性，建议 图片宽度 >= 980px
 
 ##### 其他注意事项
-1.本主题引用了多个本地资源，若是访问速度明显下降，请自行将本地资源上传到CDN或使用其他解决方案
-
-2.更多问题可以询问作者
+1.本主题引用了多个本地资源，若是访问速度明显下降，请自行将本地资源上传到CDN或使用其他解决方案  
+2.文章目录导航仅支持 h3,h4 层级  
+3.更多问题可以询问作者
 
 ----------
 
@@ -122,15 +124,20 @@ P.s. 因为测试阶段默认使用我个人注册的API TOKEN,所以请勿随�
  - [Prism.js][10]
 
 #### 更新日志
+##### Chapter I beta4
 
-##### Moricolor v1 Chapter I beta3
+ - 新增 TextBar
+ - 新增 文章目录导航(仅支持 h3,h4 层级)
+ - 优化 评论层级样式
+
+##### Chapter I beta3
 
  - 测试 Moricolor后花园_基于Thatsi
  - 新增 默认显示评论设置
  - 新增 自定义Pages导航设置(换页导航中间的三条杠杠)
  - 修复 插件无法显示BUG
 
-##### Moricolor v1 Chapter I beta2
+##### Chapter I beta2
 
  - 全新 归档页面设计
  - 新增 段落缩进设置
@@ -138,6 +145,10 @@ P.s. 因为测试阶段默认使用我个人注册的API TOKEN,所以请勿随�
  - 新增 小工具_Tag,Page
  - 更改 主页月份显示方式(3个字母简写)
  - 修复 评论作者信息编辑BUG
+
+##### Chapter I beta1
+
+ - All
 
 #### 写在最后
 

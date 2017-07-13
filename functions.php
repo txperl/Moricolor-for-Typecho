@@ -30,4 +30,43 @@ function themeInit($archive) {
 		$archive->parameter->pageSize = 16; // 自定义条数
 	}
 }
+function parseContnet($content){ //解析文章 暂只是添加h3,h4锚点
+	$ftitle=array();
+	preg_match_all('/<h([3-4])>(.*?)<\/h[3-4]>/', $content, $title);
+	$num=count($title[0]);
+	for ($i=0; $i < $num; $i++) { 
+		$f=$title[2][$i];
+		$type=$title[1][$i];
+		if ($type=='3') {
+			$ff='<h3 id="anchor-'.$i.'">'.$f.'</h3>';
+		}
+		if ($type=='4') {
+			$ff='<h4 id="anchor-'.$i.'">'.$f.'</h4>';
+		}
+		array_push($ftitle, $ff);
+	}
+	for ($i=0; $i < $num; $i++) { 
+		$content=str_replace($title[0][$i],$ftitle[$i],$content);
+	}
+	print_r($content);
+}
+function post_tor($content){
+	$tor=array();
+	$f='<a href="#main-post"><span class="tori">Title</span></a><br>';
+	preg_match_all('/<h[3-4]>(.*?)<\/h[3-4]>/', $content, $tor_i);
+	$num=count($tor_i[0]);
+	for ($i=0; $i < $num; $i++) { 
+		$a='<a href="#anchor-'.$i.'">'.$tor_i[0][$i].'</a>';
+		$f=$f.$a;
+	}
+	$f=str_replace('<h3>','<span class="tori">',$f);
+	$f=str_replace('</h3>','</span><br>',$f);
+	$f=str_replace('<h4>','<span class="torii">',$f);
+	$f=str_replace('</h4>','</span><br>',$f);
+	if ($num==0) {
+		print_r('');
+	} else {
+		print_r($f);
+	}
+}
 ?>

@@ -21,14 +21,50 @@
         $("#pagenav").fadeIn(800);
         $("#bottomtools").fadeIn(1200);
         if (window.location.hash!='') {
-          $("#comments").fadeIn(1000);
+          var i=window.location.hash.indexOf('#comment');
+          var ii=window.location.hash.indexOf('#respond-post');
+          if (i != '-1' || ii != '-1') {
+            $("#comments").fadeIn(1000);
+          }
         }
         $("#thatsi").fadeIn(1300); 
         $("#footer").css('display','block'); 
+        <?php if($this->is('post')): ?>
+        // 锚点平滑滚动
+        $('a[href*=#],area[href*=#]').click(function() {
+            $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body'); //Opera BUG fixed
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname && location.search == this.search) {
+                var $target = $(this.hash);
+                $target = $target.length && $target || $('[name=' + this.hash.slice(1) + ']');
+                if ($target.length) {
+                    var targetOffset = $target.offset().top;
+                    $('html,body').animate({
+                        scrollTop: targetOffset
+                    },
+                    1000);
+                    return false;
+                }
+            }
+        });
+        // end
+        <?php endif; ?>
       });
 
       $("#outcomment").click(function(){
         $("#comments").fadeIn(1000);
+      });
+
+      $("#comment_go").click(function(){
+        $("#comments").fadeIn(1000);
+      });
+
+      $("#tor_show").click(function(){
+        if ($("#postTor").attr('style')=='display: none;') {
+          $("#postTor").fadeIn(400);
+          $("#postTor").css('display','inline-block');
+        } else {
+          $("#postTor").fadeOut(400);
+        }
       });
     </script>
     <script>
