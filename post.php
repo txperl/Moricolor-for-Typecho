@@ -5,6 +5,7 @@
     <div id="main-post" role="main" style="display: none;">
         <article class="post" style="padding-top: 20px;">
             <h2 style="font-weight: normal;"><?php $this->title() ?></h2>
+            <div class="text-right">
         <?php if($GLOBALS['style_TextBar']=='on'): ?>
             <div class="text-bar">
                 <a href="<?php $this->options->siteUrl(); ?>" class="fui-home"></a>
@@ -17,7 +18,6 @@
                 <a href="http://service.weibo.com/share/share.php?url=<?php $this->permalink() ?>&title=<?php $this->title() ?>" target="_blank" rel="nofollow" data-placement="bottom" data-toggle="tooltip" title="Weibo" class="fui-bookmark"></a>
             </div>
         <?php endif; ?>
-            <div style="text-align: right;margin-top: 6px;">
                 <div class="post-info">
                     <?php $this->category(' '); ?>
                     <?php $this->tags(' ', true, '<a>no tag</a>'); ?>

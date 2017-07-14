@@ -53,7 +53,6 @@ html::-webkit-scrollbar-thumb:hover{background-color:#AAA;} \e641
 /* end */
 .text-bar {
   color: #34495e;
-  text-align: right;
   margin-top: -6px;
   font-size: 22px;
 }
@@ -202,7 +201,7 @@ html::-webkit-scrollbar-thumb:hover{background-color:#AAA;} \e641
 }
 .post-info a:nth-child(1n) {
   color: #fff;
-  border: 2px solid #f8bbd0;
+  border: 1px solid #f8bbd0;
   border-radius: 15px;
   background: #f8bbd0;
 }
@@ -214,10 +213,10 @@ html::-webkit-scrollbar-thumb:hover{background-color:#AAA;} \e641
   padding: 0 15px;
   -webkit-transition-duration: .4s;
   transition-duration: .4s;
-  letter-spacing: 1px;
+  letter-spacing: 0;
 }
 .post-info a:hover {
-  border: 2px solid #fff;
+  border: 1px solid #fff;
   color:#f8bbd0;
   background:#fff;
 }
@@ -272,6 +271,9 @@ html::-webkit-scrollbar-thumb:hover{background-color:#AAA;} \e641
   }
   .text-bar {
     display: none;
+  }
+  .post-info {
+    text-align: left;
   }
 }
 .tarc-t {
