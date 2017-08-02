@@ -5,7 +5,7 @@
  * 本项目属于 ProjectNatureSimple
  * @package Moricolor
  * @author Trii Hsia 
- * @version Chapter I beta4
+ * @version Chapter I beta5
  * @link https://yumoe.com/
  */
 
@@ -51,7 +51,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <ul class="pager">
       <li class="previous">
         <?php $this->pageLink('<span><i class="fui-arrow-left"></i></span>','next'); ?>
-        <?php if($this->is('index') && $this->_currentPage == $totalpages){echo '<a title="No more..." data-toggle="tooltip"><span><i class="fui-arrow-left"></i></span></a>';} ?>
+        <?php if($this->is('index') && $this->_currentPage == $totalpages){echo '<a title="没有惹" data-toggle="tooltip"><span><i class="fui-arrow-left"></i></span></a>';} ?>
       </li>
 
     <!-- Make dropdown appear above pagination -->
@@ -80,19 +80,17 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
       <li class="next">
         <?php $this->pageLink('<span><i class="fui-arrow-right"></i></span>'); ?>
-        <?php if($this->is('index') && $this->_currentPage == 1){echo '<a title="No more..." data-toggle="tooltip"><span><i class="fui-arrow-right"></i></span></a>';} ?>
+        <?php if($this->is('index') && $this->_currentPage == 1){echo '<a title="没有惹" data-toggle="tooltip"><span><i class="fui-arrow-right"></i></span></a>';} ?>
       </li>
     </ul>
   </div>
-
-
 
   <div id="bottomtools" style="display: none;">
   <?php
   $ifrun=$GLOBALS['bottomTools'];
     if ($ifrun=='on') {
       echo '<h6>(ฅ´ω`ฅ)</h6><small><ul>';
-      echo '<section style="margin: 10px;">';
+      echo '<section class="bottomtool">';
       //
         //一言
         if ($GLOBALS['bottomTools_hitokoto']=='on') {
@@ -138,6 +136,6 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
   </div>
 </div>
   <?php if($GLOBALS['beta_MoriGarden']=='on'): ?>
-  <div id="thatsi" style="display:none;"><center><a style="color:#34495e;" href="javascript:void(0)"><i id="getT" class="zmdi zmdi-chevron-down zmdi-hc-2x"></i></a></center></div>
+  <div id="thatsi" style="display:none;margin-top: 20px;"><center><a style="color:#34495e;" href="javascript:void(0)"><i id="getT" class="zmdi zmdi-chevron-down zmdi-hc-2x"></i></a></center></div>
   <?php endif; ?>
 <?php $this->need('footer.php'); ?>

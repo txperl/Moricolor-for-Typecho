@@ -10,7 +10,6 @@
             <br><br>
             <form method="post">
                 <p><input type="text" placeholder="此地址下的内容已经消失了，要不你可以搜索一下...？" name="s" autocomplete="off" class="form-control" /></p>
-                <p style="text-align: right;"><button type="submit" class="btn btn-embossed btn-primary"><?php _e('搜索'); ?></button></p>
             </form>
         </div>
 

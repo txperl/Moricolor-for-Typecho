@@ -21,7 +21,7 @@
         <?php else: ?>
             <article class="post" style="text-align: center;">
                 <h1 class="post-title"><?php _e(',,Ծ‸Ծ,,'); ?></h1>
-                <h6>表示没有写过这内容唉...</h6>
+                <h6>表示没有写过这方面的内容唉...</h6>
             </article>
         <?php endif; ?>
     </div>

@@ -54,7 +54,7 @@
                    if ($mon != $mon_tmp) {
                        $mon = $mon_tmp;
                        $output .='<section id="mon" style="overflow:hidden;">';
-                       $output .= '<span style="text-align:right;"><h6>'. date('F',$archives->created) .'</h6></span>'; //输出月份
+                       $output .= '<span style="text-align:right;"><h6>'. date('n',$archives->created) .'月</h6></span>'; //输出月份
                    }
                    $output .= '<div class="arc-t"><div class="arc-tile"><small><a href="'.$archives->permalink .'">'. $archives->title .'</a></small><br><span class="arc-date">'.date('M j, Y',$archives->created).'<span></div></div>'; //输出文章日期和标题
                endwhile;

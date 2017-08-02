@@ -95,7 +95,7 @@ echo $commentClass;
             </div>
             <?php endif; ?>
             <div class="tbox">
-            <textarea rows="3" name="text" id="textarea" class="form-control flat" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('csubmit').click();return false};" placeholder="在这里输入你的评论" required ><?php $this->remember('text',false); ?></textarea>
+            <textarea rows="3" name="text" id="textarea" class="form-control flat" onkeydown="if(event.ctrlKey&&event.keyCode==13){document.getElementById('csubmit').click();return false};" placeholder="写下您对此的评论吧~" required ><?php $this->remember('text',false); ?></textarea>
             </div>
             <center><button type="submit" class="btn btn-embossed btn-primary" id="csubmit">提交评论 (Ctrl + Enter)</button></center>
             <?php $security = $this->widget('Widget_Security'); ?>

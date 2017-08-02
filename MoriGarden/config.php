@@ -1,5 +1,5 @@
 <?php
-$GLOBALS['api_url'] = 'http://what.airs.im/lea/'; //测试中，请勿改变此地址！
+$GLOBALS['api_url'] = 'http://what.airs.im/lea/'; //测试开发中，请勿改变此地址！
 $GLOBALS['twitter'] = ''; //twitter screen_name | 如 txperl | 留空表示不开启
 $GLOBALS['bangumi'] = ''; //bangumi user | 如 228091 | 留空表示不开启
 $GLOBALS['weibo'] = ''; //weibo screen_name | 如 Multiverse_h | 留空表示不开启

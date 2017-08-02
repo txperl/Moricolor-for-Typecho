@@ -6,7 +6,7 @@
         <article class="post" style="padding-top: 20px;">
             <h2 style="font-weight: normal;"><?php $this->title() ?></h2>
             <div class="text-right">
-        <?php if($GLOBALS['style_TextBar']=='on'): ?>
+        <?php if($GLOBALS['style_TextBar']=='1'): ?>
             <div class="text-bar">
                 <a href="<?php $this->options->siteUrl(); ?>" class="fui-home"></a>
                 <a id="tor_show" href="javascript:void(0)" class="fui-list-bulleted"></a>
@@ -17,12 +17,19 @@
                 <a href="https://plus.google.com/share?url=<?php $this->permalink() ?>" target="_blank" rel="nofollow"data-placement="bottom" data-toggle="tooltip" title="Google+" class="fui-google-plus"></a>
                 <a href="http://service.weibo.com/share/share.php?url=<?php $this->permalink() ?>&title=<?php $this->title() ?>" target="_blank" rel="nofollow" data-placement="bottom" data-toggle="tooltip" title="Weibo" class="fui-bookmark"></a>
             </div>
-        <?php endif; ?>
                 <div class="post-info">
                     <?php $this->category(' '); ?>
                     <?php $this->tags(' ', true, '<a>no tag</a>'); ?>
                     <a><time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('F j, Y'); ?></time></a>
                 </div>
+        <?php endif; ?>
+        <?php if($GLOBALS['style_TextBar']=='0'): ?>
+            <p>
+                <small><?php _e('Category: '); ?><?php $this->category(', '); ?></small><br>
+                <small><?php _e('Tag: '); ?><?php $this->tags(', ', true, 'none'); ?></small><br>
+                <small>Written by <a itemprop="name" href="<?php $this->author->permalink(); ?>" rel="author"><?php $this->author(); ?></a> with ♥ on <time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('F j, Y'); ?></time></small>
+            </p>
+        <?php endif; ?>
             </div>
             <div class="post-content" itemprop="articleBody">
                 <?php parseContnet($this->content); ?>
@@ -35,18 +42,12 @@
     <ul class="pager">  
         <li class="previous">
             <a href="<?php $this->options->siteUrl(); ?>">
-                <span>
-                &nbsp;
                 <span class="fui-home"></span>
-                </span>
             </a>
         </li>
         <li class="next" id="outcomment">
             <a href="javascript:void(0)">
-                <span>
                 <span class="fui-chat"></span>
-                &nbsp;
-                </span>
             </a>
         </li>
 

@@ -21,11 +21,11 @@ $GLOBALS['bottomTools_search'] = 'on'; //搜索
 $GLOBALS['index_QuickPreview'] = '1'; //每页默认显示 X 个快速预览
 
 //样式
-$GLOBALS['style_TextBar'] = 'on'; //上边栏及分享按钮 (文章目录导航仅支持 h3,h4 层级)
+$GLOBALS['style_TextBar'] = '1'; //文章页头部信息 | 1:功能按钮及分享按钮 (文章目录导航仅支持 h3,h4 层级) 0:纯文本
 $GLOBALS['style_TextIndent'] = 'on'; //首行缩进
 $GLOBALS['style_CommentShow'] = 'off'; //默认显示评论
 $GLOBALS['style_Color'] = 'normal'; //全局配色设定 | 下个版本开放
 
 //前方有怪兽！
-$GLOBALS['beta_MoriGarden'] = 'on'; //开启后请自行修改 ./MoriGarden/config.php 配置，否则会出事情的！
+$GLOBALS['beta_MoriGarden'] = 'off'; //开启后请自行修改 ./MoriGarden/config.php 配置，否则会出事情的！
 ?>
