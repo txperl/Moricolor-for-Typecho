@@ -12,7 +12,7 @@
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
  $this->need('header.php');
  $i=0;
- ?>
+?>
 
 <div id="main" class="container">
   <div id="main-index" style="display: none;">
@@ -50,8 +50,15 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
   <div id="pagenav" class="text-center" style="display: none;">
     <ul class="pager">
       <li class="previous">
-        <?php $this->pageLink('<span><i class="fui-arrow-left"></i></span>','next'); ?>
-        <?php if($this->is('index') && $this->_currentPage == $totalpages){echo '<a title="没有惹" data-toggle="tooltip"><span><i class="fui-arrow-left"></i></span></a>';} ?>
+        <?php 
+            if ($GLOBALS['index_PagingReversal']=='on') {
+              $this->pageLink('<span><i class="fui-arrow-left"></i></span>');
+              if($this->is('index') && $this->_currentPage == 1){echo '<a title="没有惹" data-toggle="tooltip"><span><i class="fui-arrow-left"></i></span></a>';}
+            } else {
+              $this->pageLink('<span><i class="fui-arrow-left"></i></span>','next');
+              if($this->is('index') && $this->_currentPage == $totalpages){echo '<a title="没有惹" data-toggle="tooltip"><span><i class="fui-arrow-left"></i></span></a>';}
+            }
+        ?>
       </li>
 
     <!-- Make dropdown appear above pagination -->
@@ -79,8 +86,15 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     </li>
 
       <li class="next">
-        <?php $this->pageLink('<span><i class="fui-arrow-right"></i></span>'); ?>
-        <?php if($this->is('index') && $this->_currentPage == 1){echo '<a title="没有惹" data-toggle="tooltip"><span><i class="fui-arrow-right"></i></span></a>';} ?>
+        <?php 
+          if ($GLOBALS['index_PagingReversal']=='on') {
+            $this->pageLink('<span><i class="fui-arrow-right"></i></span>','next');
+            if($this->is('index') && $this->_currentPage == $totalpages){echo '<a title="没有惹" data-toggle="tooltip"><span><i class="fui-arrow-right"></i></span></a>';}
+          } else {
+            $this->pageLink('<span><i class="fui-arrow-right"></i></span>');
+            if($this->is('index') && $this->_currentPage == 1){echo '<a title="没有惹" data-toggle="tooltip"><span><i class="fui-arrow-right"></i></span></a>';}
+          }
+        ?>
       </li>
     </ul>
   </div>
