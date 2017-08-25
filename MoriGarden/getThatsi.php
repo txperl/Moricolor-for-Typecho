@@ -17,25 +17,6 @@ if ($GLOBALS['twitter']!='') {
         echo '<center><div class="tarc-t"><div class="tarc-tile">'.$text.'</div></div></center>';
     }
 }
-//weibo
-if ($GLOBALS['weibo']!='') {
-    $weib = $data[2];
-    $weib = json_decode($weib, true); 
-    $weib = $weib['statuses'];
-    $num = count($weib);
-
-    echo '<h5 style="font-weight:normal;margin-bottom:20px;margin-top:30px;pmargin-left:-10px;">Weibo</h5>';
-    for ($i=0; $i < $num; $i++) { 
-        $text=$weib[$i]['text'];
-        $time=$weib[$i]['created_at'];
-        if ($text=='转发微博') {
-            $text=$weib[$i]['retweeted_status']['text'];
-            $time=$weib[$i]['retweeted_status']['created_at'];
-        }
-        
-        echo '<center><div class="tarc-t"><div class="tarc-tile" style="text-align:left;">'.$text.'</div></div></center>';
-    }
-}
 //bangumi
 if ($GLOBALS['bangumi']!='') {
     $bgm = $data[1];

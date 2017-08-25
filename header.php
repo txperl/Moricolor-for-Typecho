@@ -8,6 +8,7 @@
     echo '</style>';
     echo "\n";
   }
+  $index_img=$GLOBALS['index_Image'];
 ?>
   <head>
     <meta charset="utf-8">
@@ -45,5 +46,6 @@
         <p class="description"><?php $this->options->description() ?></p>
         <hr>
     </div>
-    <?php endif; ?>
+  <?php endif; ?>
+
   </header>

@@ -32,9 +32,15 @@
       <!-- 文章归档 -->
           <div clss="post-archive" itemprop="articleBody">
             <?php $this->widget('Widget_Contents_Post_Recent', 'pageSize=10000')->to($archives);
-               $year=0; $mon=0; $i=0; $j=0; $i=0;
+               $year=0; $mon=0; $i=0; $j=0; $a=0;
                $output = '<div id="archives">';
                while($archives->next()):
+                $a=$a+1;
+                if ($a==1) {
+                  $collapse='collapse in';
+                } else {
+                  $collapse='collapse';
+                }
                    $year_tmp = date('Y',$archives->created);
                    $mon_tmp = date('m',$archives->created);
                    $y=$year; $m=$mon;
@@ -49,7 +55,8 @@
                    if ($year != $year_tmp) {
                        $year = $year_tmp;
                        $output .='<section id="year" style="overflow:hidden;">';
-                       $output .= '<h5>'. $year .'</h5>'; //输出年份
+                       $output .= '<h5><a style="color:#34495e;" data-toggle="collapse" href="#'.$year.'" aria-expanded="false" aria-controls="'.$year.'">'. $year .'</a></h5>'; //输出年份
+                       $output .= '<div class="'.$collapse.'" id="'.$year.'">';
                    }
                    if ($mon != $mon_tmp) {
                        $mon = $mon_tmp;

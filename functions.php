@@ -1,6 +1,6 @@
 <?php
 ini_set("error_reporting","E_ALL & ~E_NOTICE");
-function img_postthumb($cid) {
+function img_postthumb($cid,$type=0) {
 	$db = Typecho_Db::get();
 	$rs = $db->fetchRow($db->select('table.contents.text')
 	->from('table.contents')
@@ -18,7 +18,13 @@ function img_postthumb($cid) {
 		break;
 
 		case $allPics = 1:
-		echo '<img src="'.$img_src.'" class="img-rounded img-responsive" style="box-shadow: 0 2px 15px 1px rgba(0,0,0,0.1);">';  //当找到一个src地址的时候，输出缩略图
+			if ($type==0) {
+				echo '<img src="'.$img_src.'" class="img-rounded img-responsive" style="box-shadow: 0 2px 15px 1px rgba(0,0,0,0.1);">'; 
+			} elseif($type==1) {
+				echo '<div class="cover-image" style="background-image: url(\''.$img_src.'\');"></div>'; 
+			}elseif($type==2){
+				echo '';
+			}//当找到一个src地址的时候，输出缩略图
 		break;
 
 		default:

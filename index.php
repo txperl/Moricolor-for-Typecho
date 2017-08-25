@@ -5,13 +5,13 @@
  * 本项目属于 ProjectNatureSimple
  * @package Moricolor
  * @author Trii Hsia 
- * @version Chapter I beta5
+ * @version Chapter I
  * @link https://yumoe.com/
  */
 
 if (!defined('__TYPECHO_ROOT_DIR__')) exit;
- $this->need('header.php');
- $i=0;
+$this->need('header.php');
+$i=0;
 ?>
 
 <div id="main" class="container">
@@ -39,7 +39,13 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
         </dt>
         <dd><a itemtype="url" href="<?php $this->permalink() ?>"><?php $this->title() ?></a></span></dd>
         <dd class="<?php echo $collapse ?>" id="<?php echo $i ?>">
-        <?php echo img_postthumb($this->cid); ?>
+        <?php
+          if ($GLOBALS['index_QuickPreview_Img']=='on') {
+            img_postthumb($this->cid);
+          } else {
+            img_postthumb($this->cid,2);
+          }
+        ?>
         <small><?php $this->excerpt(200,' ······'); ?></small>
         </dd>
       </dl>
@@ -51,13 +57,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
     <ul class="pager">
       <li class="previous">
         <?php 
-            if ($GLOBALS['index_PagingReversal']=='on') {
-              $this->pageLink('<span><i class="fui-arrow-left"></i></span>');
-              if($this->is('index') && $this->_currentPage == 1){echo '<a title="没有惹" data-toggle="tooltip"><span><i class="fui-arrow-left"></i></span></a>';}
-            } else {
               $this->pageLink('<span><i class="fui-arrow-left"></i></span>','next');
               if($this->is('index') && $this->_currentPage == $totalpages){echo '<a title="没有惹" data-toggle="tooltip"><span><i class="fui-arrow-left"></i></span></a>';}
-            }
         ?>
       </li>
 
@@ -87,13 +88,8 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 
       <li class="next">
         <?php 
-          if ($GLOBALS['index_PagingReversal']=='on') {
-            $this->pageLink('<span><i class="fui-arrow-right"></i></span>','next');
-            if($this->is('index') && $this->_currentPage == $totalpages){echo '<a title="没有惹" data-toggle="tooltip"><span><i class="fui-arrow-right"></i></span></a>';}
-          } else {
             $this->pageLink('<span><i class="fui-arrow-right"></i></span>');
             if($this->is('index') && $this->_currentPage == 1){echo '<a title="没有惹" data-toggle="tooltip"><span><i class="fui-arrow-right"></i></span></a>';}
-          }
         ?>
       </li>
     </ul>

@@ -18,7 +18,7 @@
                 <a href="http://service.weibo.com/share/share.php?url=<?php $this->permalink() ?>&title=<?php $this->title() ?>" target="_blank" rel="nofollow" data-placement="bottom" data-toggle="tooltip" title="Weibo" class="fui-bookmark"></a>
             </div>
                 <div class="post-info">
-                    <?php $this->category(' '); ?>
+                    <span class="post-info-n"><?php $this->category(' '); ?></span>
                     <?php $this->tags(' ', true, '<a>no tag</a>'); ?>
                     <a><time datetime="<?php $this->date('c'); ?>" itemprop="datePublished"><?php $this->date('F j, Y'); ?></time></a>
                 </div>
@@ -31,6 +31,9 @@
             </p>
         <?php endif; ?>
             </div>
+            <!-- 头图 -->
+                <?php img_postthumb($this->cid,1); ?>
+            <!-- end -->
             <div class="post-content" itemprop="articleBody">
                 <?php parseContnet($this->content); ?>
             </div>
