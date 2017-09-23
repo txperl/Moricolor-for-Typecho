@@ -55,17 +55,14 @@ function srh(){
 	$api_url=$GLOBALS['api_url'].'?';
 	$twitter_url=$api_url.'app=twitter&name='.$GLOBALS['twitter'];
 	$bangumi_url=$api_url.'app=bangumi&name='.$GLOBALS['bangumi'];
-    $weibo_url=$api_url.'app=weibo&name='.$GLOBALS['weibo'];
 	$urls=array();
 		array_push($urls,$twitter_url);//0
 		array_push($urls,$bangumi_url);//1
-        array_push($urls,$weibo_url);//2
 	//获取网页数据
 		$frst=curl_multi($urls);
 		$rst=array();
 		array_push($rst,$frst[0]);//0
 		array_push($rst,$frst[1]);//1
-        array_push($rst,$frst[2]);//2
 	return $rst;
 }
 //多线程抓取网页
