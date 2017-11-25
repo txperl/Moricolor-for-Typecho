@@ -65,6 +65,7 @@ echo $commentClass;
     </style>
 <div id="comments" class="gen" style="display: none;">
 <?php $this->comments()->to($comments); ?>
+  <?php if($this->allow('comment')): ?>
     <?php if ($comments->have()): ?>
     <hr>
     <h6><?php $this->commentsNum(_t('暂无评论'), _t('仅有 1 条评论'), _t('已有 %d 条评论')); ?></h6>
@@ -107,4 +108,11 @@ echo $commentClass;
             }
         </script>
     </div>
+  <?php else: ?>
+        <hr>
+        <center><h6 class="response">_(:3 」∠)_</h6></center>
+        <center>(抱歉)</center>
+        <center>这里不能评论哦</center>
+        <br>
+  <?php endif; ?>
 </div>
