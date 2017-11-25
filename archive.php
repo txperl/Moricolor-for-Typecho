@@ -4,10 +4,10 @@
     <div class="container" id="main-archive" style="display: none;">
     <div class="post-content">
         <h4 class="archive-title"><?php $this->archiveTitle(array(
-            'category'  =>  _t('Category: %s'),
-            'search'    =>  _t('Search: %s'),
-            'tag'       =>  _t('Tag: %s'),
-            'author'    =>  _t('Author: %s')
+            'category'  =>  _t('Category - %s'),
+            'search'    =>  _t('Search - %s'),
+            'tag'       =>  _t('Tag - %s'),
+            'author'    =>  _t('Author - %s')
         ), '', ''); ?></h4>
         <?php if ($this->have()): ?>
     	<?php while($this->next()): ?>
@@ -21,7 +21,7 @@
         <?php else: ?>
             <article class="post" style="text-align: center;">
                 <h1 class="post-title"><?php _e(',,Ծ‸Ծ,,'); ?></h1>
-                <h6>表示没有写过这方面的内容唉...</h6>
+                <h6>表示没有写过关于这方面的内容唉...</h6>
             </article>
         <?php endif; ?>
     </div>
