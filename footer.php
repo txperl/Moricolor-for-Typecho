@@ -12,6 +12,7 @@
         hitokoto=$.ajax({url:"https://api.lwl12.com/hitokoto/main/get",async:false});
         $("#hitokoto").html("Hitokoto&nbsp; · &nbsp;&nbsp;"+hitokoto.responseText);
       }
+
       $(document).ready(function() {
         $("#main-index").fadeIn(800);
         $("#main-archive").fadeIn(800);
@@ -104,7 +105,7 @@
     }
     ?>
 
-  <footer id="footer" class="container" style="background:#fff;display:none;">
+  <footer id="footer" class="container" style="background:rgba(255, 255, 255, 0);display:none;">
     <hr>
     <div style="text-align:center;padding-bottom:9px;">
       <p>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.

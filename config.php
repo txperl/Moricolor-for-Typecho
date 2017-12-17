@@ -25,7 +25,17 @@ $GLOBALS['index_QuickPreview_Img'] = 'off'; //文章预览是否显示图片
 $GLOBALS['style_TextBar'] = '1'; //文章页头部信息 | 1:功能按钮及分享按钮(文章目录导航仅支持 h3,h4 层级) | 0:纯文本
 $GLOBALS['style_TextIndent'] = 'off'; //首行缩进
 $GLOBALS['style_CommentShow'] = 'off'; //默认显示评论
-$GLOBALS['style_Color'] = 'normal'; //全局配色设定 | 下个版本开放 | 有生之年...
+$GLOBALS['style_BGPic'] = ''; //博客背景图设置(填入图片链接)，留空为不开启
+$GLOBALS['style_FontWeight'] = 'normal'; //字体粗细 | normal:默认 | lighter:细 | bolder:粗
+//因有些背景图与原主题风格不同，你可以将'style_FontWeight'设置为 lighter 再更换一下配色，这样整体性会高一些
+
+//配色 全局配色设定(请自行复制粘贴以下相应数组) | 初版,只包含小部分颜色调整(文章配色请自行在mori.css中更改)
+//Mori(森) - array('Mori')
+//H(类似黑) - array('','#546e7a','#90a4ae','#90a4ae')
+//Q(应该青) - array('','#00838f','#00acc1','#00acc1')
+//L(有点蓝) - array('#0277bd','#0288d1','#03a9f4','#90caf9')
+//F(微微粉) - array('#f48fb1','#f48fb1','#f8bbd0','')
+$GLOBALS['style_Color'] = array('Mori');
 
 //前方有怪兽！
 $GLOBALS['beta_MoriGarden'] = 'off'; //开启后请自行修改 ./MoriGarden/config.php 配置，否则会出事情的！

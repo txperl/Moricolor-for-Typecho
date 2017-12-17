@@ -75,4 +75,20 @@ function post_tor($content){
 		print_r($f);
 	}
 }
+function change_color($c){
+	$index_time='dt a{color:'.$c[0].'!important;}';
+	$index_post_link='dd a{color:'.$c[1].'!important;}dd a:hover{color:'.$c[2].'!important;}';
+	$post_info='.post-info a:nth-child(1n){background:'.$c[3].'!important;}.post-info a:hover{color:'.$c[3].'!important;background: #fff0 !important;}';
+	$rst=$index_time.$index_post_link.$post_info;
+	return $rst;
+}
+function change_fontweight($w){
+	if ($w=='lighter') {
+		$rst='body{font-weight: 300!important;}dt{font-weight: 500!important;}h1,h2,h3{font-weight:500!important;}b, strong{font-weight:500!important;}';
+	}
+	if ($w=='bolder') {
+		$rst='body{font-weight: 600!important;}h1,h2,h3{font-weight:700!important;}b, strong{color:#F39C12!important;}';
+	}
+	return $rst;
+}
 ?>

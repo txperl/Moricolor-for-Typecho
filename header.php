@@ -2,12 +2,27 @@
 <!DOCTYPE html>
 <?php
   require_once 'config.php';
-  if ($GLOBALS['style_TextIndent'] == 'on') {
-    echo '<style>';
-      echo '.post-content p,.post-content li{text-indent: 2em;}';
-    echo '</style>';
+  require_once 'functions.php';
+  echo '<style>';
+  echo "\n";
+  if ($GLOBALS['style_Color'][0] != 'Mori') {
+    $stColor=change_color($GLOBALS['style_Color']);
+    echo $stColor;
+  }
+  if ($GLOBALS['style_FontWeight'][0] != '' || $GLOBALS['style_FontWeight'][0] != 'normal') {
+    $stFontWeight=change_fontweight($GLOBALS['style_FontWeight']);
+    echo $stFontWeight;
+  }
+  if ($GLOBALS['style_BGPic'] != '') {
+    echo 'body{background: #fafafa;}body::before {background: url('.$GLOBALS['style_BGPic'].') center/cover no-repeat;}';
     echo "\n";
   }
+  if ($GLOBALS['style_TextIndent'] == 'on') {
+    echo '.post-content p,.post-content li{text-indent: 2em;}';
+    echo "\n";
+  }
+  echo '</style>';
+  echo "\n";
   $index_img=$GLOBALS['index_Image'];
 ?>
   <head>

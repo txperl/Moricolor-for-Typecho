@@ -70,7 +70,9 @@ echo $commentClass;
     <hr>
     <h6><?php $this->commentsNum(_t('暂无评论'), _t('仅有 1 条评论'), _t('已有 %d 条评论')); ?></h6>
     <?php $comments->listComments(); ?>
-    <?php $comments->pageNav('&laquo;', '&raquo;'); ?>
+    <div style="text-align: center;margin-top: 20px;">
+    <?php $comments->pageNav('← Previous', 'Newer →', 1, '...', array('wrapTag' => 'ul', 'wrapClass' => 'pagination-plain', 'itemTag' => 'li', 'prevClass' => 'previous', 'nextClass' => 'next', 'currentClass' => 'active' )); ?>
+    </div>
     <?php endif; ?>
     <div id="<?php $this->respondId(); ?>" class="respond">
         <div class="ccomment_reply">
@@ -83,7 +85,7 @@ echo $commentClass;
             <p>已登入<a href="<?php $this->options->profileUrl(); ?>"><?php $this->user->screenName(); ?></a>. <a href="<?php $this->options->logoutUrl(); ?>" title="Logout">退出 &raquo;</a></p>
             <?php else: ?>
             <?php if($this->remember('author',true) != "" && $this->remember('mail',true) != "") : ?>
-            <span>欢迎 <?php $this->remember('author'); ?> 的到来 | <small style="cursor: pointer;" onclick="editinfo();"> 编辑资料</small></span>
+            <span>欢迎 <?php $this->remember('author'); ?> 的到来 | <small style="cursor: pointer;" onclick="editinfo();"> 编辑</small></span>
             <div id ="ainfo" class="ainfo hinfo">
             <?php else : ?>
             <div class="ainfo">
