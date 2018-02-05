@@ -31,6 +31,25 @@ function img_postthumb($cid,$type=0) {
 		echo '';  //没找到(默认情况下)，不输出任何内容
 	};
 }
+function des_postthumb($cid) {
+	$db = Typecho_Db::get();
+	$rs = $db->fetchRow($db->select('table.contents.text')
+	->from('table.contents')
+	->where('table.contents.cid=?', $cid)
+	->order('table.contents.cid', Typecho_Db::SORT_ASC)
+	->limit(1));
+ 
+	preg_match_all("/<!-- des_quick:(.*?); -->/", $rs['text'], $thumbC);
+
+	$des_content = $thumbC[1][0];
+	$des_counter = count($thumbC[0]);
+ 
+	if ($des_counter > 0) {
+		return $des_content;
+	} else {
+		return '';
+	}
+}
 function themeInit($archive) {
 	if ($archive->is('category') or $archive->is('tag') or $archive->is('search') or $archive->is('author')) {
 		$archive->parameter->pageSize = 16; // 自定义条数

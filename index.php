@@ -46,7 +46,11 @@ $i=0;
             img_postthumb($this->cid,2);
           }
         ?>
-        <small><?php $this->excerpt(200,' ······'); ?></small>
+        <?php if(des_postthumb($this->cid)!=''): ?>
+        	<small><?php echo des_postthumb($this->cid) ?></small>
+        <?php else: ?>
+        	<small><?php $this->excerpt(200,' ······') ?></small>
+        <?php endif; ?>
         </dd>
       </dl>
         </article>
