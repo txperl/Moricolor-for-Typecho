@@ -1,5 +1,5 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <?php
   require_once 'config.php';
   require_once 'functions.php';
@@ -26,15 +26,16 @@
   $index_img=$GLOBALS['index_Image'];
 ?>
   <head>
-    <meta charset="utf-8">
+    <meta charset="<?php $this->options->charset(); ?>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title><?php $this->archiveTitle(array(
             'category'  =>  _t('%s'),
             'search'    =>  _t('%s'),
             'tag'       =>  _t('%s'),
             'author'    =>  _t('%s')
         ), '', ' - '); ?><?php $this->options->title(); ?></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php $this->header('keywords=&generator=&template=&pingback=&xmlrpc=&wlw=&commentReply=&rss1=&rss2=&atom='); ?>
 
     <link href="<?php $this->options->themeUrl('./css/mori.css'); ?>" rel="stylesheet">
     <link href="<?php $this->options->themeUrl('./css/vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
@@ -47,6 +48,7 @@
       <script src="<?php $this->options->themeUrl('./js/vendor/html5shiv.js'); ?>"></script>
       <script src="<?php $this->options->themeUrl('./js/vendor/respond.min.js'); ?>"></script>
     <![endif]-->
+    <?php $this->header(); ?>
   </head>
   <body>
   <header>

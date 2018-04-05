@@ -1,7 +1,7 @@
 <?php
 $GLOBALS['api_url'] = 'http://mori.cafe/what/lea/'; //开发测试中，请勿更改此地址！
-$GLOBALS['twitter'] = 'txperl'; //twitter screen_name | 如 txperl | 留空表示不开启
-$GLOBALS['bangumi'] = '228091'; //bangumi user | 如 228091 | 留空表示不开启
+$GLOBALS['twitter'] = ''; //twitter screen_name | 如 txperl | 留空表示不开启
+$GLOBALS['bangumi'] = ''; //bangumi user | 如 228091 | 留空表示不开启
 
 //说明
 //MoriGarden是基于Thatsi的一个简单例子

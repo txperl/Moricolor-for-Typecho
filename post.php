@@ -2,9 +2,9 @@
 <?php $this->need('header.php'); ?>
 
 <div id="main" class="container">
-    <div id="main-post" role="main" style="display: none;">
+    <div id="main-post" role="main" itemscope itemtype="http://schema.org/BlogPosting" style="display: none;">
         <article class="post" style="padding-top: 20px;">
-            <h2 style="font-weight: normal;"><?php $this->title() ?></h2>
+            <h2 itemprop="name headline" style="font-weight: normal;"><?php $this->title() ?></h2>
             <div class="text-right">
         <?php if($GLOBALS['style_TextBar']=='1'): ?>
             <div class="text-bar">
