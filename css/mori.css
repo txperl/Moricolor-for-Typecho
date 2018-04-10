@@ -13,7 +13,6 @@ body::before {
   opacity: .05;
   z-index: -1;
   position: fixed;
-  background-color: #fff;
 }
 /* PostTor CSS */
 .post-tor-content {
@@ -84,9 +83,10 @@ body::before {
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
   max-width: 100vw;
 }
 @media (min-width: 768px){
@@ -98,7 +98,8 @@ body::before {
 hr {
   border-top: 1px dashed #cfd8dc7a!important;
 }
-.post-content p,.post-content li {
+.post-content p,
+.post-content li {
   font-size: 16px;
   letter-spacing: .6px;
   text-align: justify;
@@ -234,7 +235,7 @@ hr {
   max-width: 100%;
   height: auto;
 }
-}
+
 .description p{
   font-size: 17px;
 }
@@ -272,20 +273,27 @@ hr {
 }
 .post-tags .tags-list a::before {
   content:"# ";
-  color: #e8a6a6;
+  color: #16a085;
+  -webkit-transition: .5s;
+          transition: .5s;
+}
+.post-tags .tags-list a:hover::before {
+  color: #fff;
 }
 .post-tags .tags-list a {
   margin: 4px 8px 0 0;
-  font-size: 12px;
-  font-weight: 350;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
   display: inline-block;
   padding: 0 12px;
-  -webkit-transition-duration: .4s;
-  transition-duration: .4s;
+  -webkit-transition: .5s;
+          transition: .5s;
   letter-spacing: 0;
 }
 .post-tags .tags-list a:hover {
-  color:rgb(51, 51, 51);
+  color:rgb(255, 255, 255);
+  background-color: #16a085;
 }
 .post-info {
   margin: 0;
@@ -295,11 +303,11 @@ hr {
 .post-info a:nth-child(1n) {
   color: #fff;
   border-radius: 15px;
-  background: #f8bbd0;
+  background: #16a085;
 }
 .post-info a {
-  font-size: 13px;
-  font-weight: normal;
+  font-size: 14px;
+  font-weight: bold;
   display: inline-block;
   margin: 4px 8px 0 0;
   padding: 1px 15px;
@@ -308,14 +316,14 @@ hr {
   letter-spacing: 0;
 }
 .post-info a:hover {
-  color:#f8bbd0;
+  color:#16a085;
   background:#fff0;
 }
-.post-info a::before {
+.post-info .post-info-tag a::before {
   content: '# ';
 }
-.post-info .post-info-n a::before {
-  content: '';
+.post-info time {
+  cursor: pointer;
 }
 /* --- */
 .arc-t {
