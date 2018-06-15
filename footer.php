@@ -9,7 +9,7 @@
     <script src="<?php $this->options->themeUrl('js/prism.js'); ?>"></script>
     <script type="text/javascript">
       function getHitokoto() {
-        hitokoto=$.ajax({url:"https://api.lwl12.com/hitokoto/main/get",async:false});
+        hitokoto=$.ajax({url:"https://api.imjad.cn/hitokoto/",async:false});
         $("#hitokoto").html("Hitokoto&nbsp; · &nbsp;&nbsp;"+hitokoto.responseText);
       }
 

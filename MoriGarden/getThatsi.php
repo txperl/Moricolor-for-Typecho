@@ -53,8 +53,8 @@ if ($GLOBALS['bangumi']!='') {
 function srh(){
 	require_once 'config.php';
 	$api_url=$GLOBALS['api_url'].'?';
-	$twitter_url=$api_url.'app=twitter&name='.$GLOBALS['twitter'];
-	$bangumi_url=$api_url.'app=bangumi&name='.$GLOBALS['bangumi'];
+	$twitter_url=$api_url.'app=twitter&key=user_timeline&screen_name='.$GLOBALS['twitter'];
+	$bangumi_url=$api_url.'app=bangumi&key=watching&name='.$GLOBALS['bangumi'];
 	$urls=array();
 		array_push($urls,$twitter_url);//0
 		array_push($urls,$bangumi_url);//1

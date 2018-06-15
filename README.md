@@ -6,8 +6,15 @@
 > Moricolor Chapter I 现已发布
 > 
 > 欢迎体验使用
+> 
+> [MoriColor for Hexo](https://github.com/Anapopo/Moricolor-for-Hexo) by Anapopo
 
-***Demo***: [Yumoe][1]
+
+***Demo1***: [Yumoe][1]
+
+***Demo2***: [猫与向日葵](https://imjad.cn/)
+
+***Demo3***: [KIKOのSPACE(Hexo)](https://blog.kiko.space/)
 
 ----------
 
@@ -70,11 +77,11 @@ $GLOBALS['beta_MoriGarden'] = 'off'; //开启后请自行修改 ./MoriGarden/con
 ```
 
 **MoriGarden[Beta]**
-MoriGarden是基于Thatsi的一个简单例子
-这个工具可将你的社交平台动态与博客同步，开启后位于主页底部
-目前包含如下内容：
-twitter: 以时间轴顺序，获取对应id(是@后面的名称)的公开推文（墙内也可使用）
-bangumi: 以时间轴顺序，获取对应id(是@后面的名称)的在看番剧 （这个应该只有二次元迷会用得到吧，我反正是用了...）
+MoriGarden是基于Thatsi的一个简单例子  
+这个工具可将你的社交平台动态与博客同步，开启后位于主页底部  
+目前包含如下内容：  
+twitter: 以时间轴顺序，获取对应id(是@后面的名称)的公开推文（墙内也可使用）  
+bangumi: 以时间轴顺序，获取对应id(是@后面的名称)的在看番剧 （这个应该只有二次元迷会用得到吧，我反正是用了...）  
 P.s. 因为测试阶段默认使用我个人注册的API TOKEN,所以请勿随意或恶意提交
 
 **本主题包含一套 Material Design 图标**
@@ -120,8 +127,8 @@ P.s. 因为测试阶段默认使用我个人注册的API TOKEN,所以请勿随�
 将 your_words 改成你需要的内容即可
 
 **配色与背景图与字体粗细相关**
-目前配色只是一个初版，所以很不完善
-关于背景图，设置一下淡灰风格的图片会显得不那么奇怪
+目前配色只是一个初版，所以很不完善  
+关于背景图，设置一下淡灰风格的图片会显得不那么奇怪  
 字体粗细如果没有更改，但你添加了背景图，可以试着改成 lighter 或 bolder ，这样样式整体性会高一些
 
 **其他注意事项**
@@ -143,6 +150,17 @@ P.s. 因为测试阶段默认使用我个人注册的API TOKEN,所以请勿随�
 
 #### 更新日志
 ##### Chapter I
+ - **[v1.4]**
+ - 全新 [MoriColor for Hexo](https://github.com/Anapopo/Moricolor-for-Hexo) 主题 (感谢 Anapopo)
+ - 微调 `<h4>,<a>,<li>` 标签样式
+ - 微调 背景图片灰度取值
+ - 微调 页面细节
+ - 更改 一言 API 更换为 『api.imjad.cn』
+ - 更改 主题资源 CDN(CloudflareCDN→StaticfileCDN)
+ - 更改 MoriGarden 基于重写版的 Thatsi
+ - **[v1.3]**
+ - 修复 文章导航重名替换 BUG
+ - 优化 SEO
  - **[v1.2!]**
  - 新增 自定义快速预览内容
  - **[v1.2]**

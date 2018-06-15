@@ -9,6 +9,7 @@
             'tag'       =>  _t('Tag - %s'),
             'author'    =>  _t('Author - %s')
         ), '', ''); ?></h4>
+        <br>
         <?php if ($this->have()): ?>
     	<?php while($this->next()): ?>
             <article class="post">

@@ -1,4 +1,5 @@
-/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript+aspnet+c+csharp+cpp+ruby+git+go+java+json+nginx+objectivec+perl+php+python+rust+sql+swift */
+/* PrismJS 1.14.0
+https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+c+csharp+cpp+aspnet+coffeescript+ruby+docker+markup-templating+git+go+java+json+nginx+objectivec+pascal+perl+php+php-extras+python+rust */
 /**
  * okaidia theme for JavaScript, CSS and HTML
  * Loosely based on Monokai textmate theme by http://www.monokai.nl/
@@ -96,7 +97,8 @@ pre[class*="language-"] {
 
 .token.atrule,
 .token.attr-value,
-.token.function {
+.token.function,
+.token.class-name {
 	color: #e6db74;
 }
 

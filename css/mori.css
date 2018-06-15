@@ -3,17 +3,26 @@ html::-webkit-scrollbar{width:8px;height:8px;}
 html::-webkit-scrollbar-thumb{height:40px;background-color:#eee; border-radius: 16px;}
 html::-webkit-scrollbar-thumb:hover{background-color:#ddd;}
 
+#instantclick-bar {
+  background: none;
+}
 body::before {
   content: '';
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: block;
-  opacity: .05;
-  z-index: -1;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.025;
   position: fixed;
-  background-color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
 }
 /* PostTor CSS */
 .post-tor-content {
@@ -125,7 +134,7 @@ hr {
   margin-left: -1px;
 }
 .post-content h4 {
-  font-size: 1.1em;
+  font-size: 1.2em;
   color:#546e7a;
   font-weight: 400;
   margin-top: 25px;
@@ -160,19 +169,16 @@ hr {
 }
 .post-content ul li{
   text-indent: 0;
-  list-style:none;
+  list-style: square;
 }
 .post-content a{
   color: #8d6e63;
 }
-.post-content a:hover{
+.post-content a:hover,.post-content a:focus{
   color: #bcaaa4;
 }
 .post-content ul li::before{
-  font-family: 'Material-Design-Iconic-Font';
-  color:#757575;
   margin-right: 5px;
-  content: "\f2fb";
 }
 .post-content ol li{
   text-indent: 0;
@@ -224,8 +230,8 @@ hr {
 .post-content blockquote strong {
   font-size:15px;
 }
-.post-content p img{
-  box-shadow: 0 2px 15px 1px rgba(0,0,0,0.1);
+.post-content p img {
+  box-shadow: 0 2px 15px 0px rgba(0,0,0,0.1);
   display:block;
   margin:0 auto;
   text-align: center;
@@ -235,7 +241,7 @@ hr {
   height: auto;
 }
 }
-.description p{
+.description p {
   font-size: 17px;
 }
 /* post-tags /// CSS部分来自 https://www.linpx.com/ */
