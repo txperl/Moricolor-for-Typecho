@@ -213,7 +213,7 @@ P.s. 因为测试阶段默认使用我个人注册的API TOKEN,所以请勿随�
 感谢。
 
 
-  [1]: https://yumoe.com/
+  [1]: https://null.yumoe.com/2-0/
   [2]: http://zavoloklom.github.io/material-design-iconic-font/index.html
   [3]: http://www.bootcss.com/p/flat-ui/
   [4]: https://www.materialpalette.com/colors
