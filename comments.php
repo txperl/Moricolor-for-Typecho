@@ -62,7 +62,8 @@ echo $commentClass;
     }
     .tbox{padding: 0 0 15px 0px;}
     @media only screen and (max-width:767px){.comment-parent .comment-children{margin-left:0;padding-left:0}}
-    </style>
+</style>
+
 <div id="comments" class="gen" style="display: none;">
 <?php $this->comments()->to($comments); ?>
   <?php if($this->allow('comment')): ?>

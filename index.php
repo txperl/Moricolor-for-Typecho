@@ -114,7 +114,7 @@ $i=0;
         if ($GLOBALS['bottomTools_category']=='on') {
           echo '<span style="padding-right: 1px;">Category</span> · &nbsp;';
             $this->widget('Widget_Metas_Category_List')
-                ->parse('<a style="color:#95A5A6;" href="{permalink}"> &{name} </a>&nbsp; · &nbsp;');
+                ->parse('<a style="color:#95A5A6;text-shadow: 0 0 1px rgba(0,0,0,.1);" href="{permalink}"> &{name} </a>&nbsp; · &nbsp;');
           echo '<br>';
         }
         //标签
@@ -122,7 +122,7 @@ $i=0;
           echo '<span>Tag</span> · &nbsp;';
           $this->widget('Widget_Metas_Tag_Cloud')->to($tags);
             while($tags->next()):
-              echo '<a href="'. $tags->permalink .'" style="color:#95A5A6;">'. $tags->name .'</a>&nbsp; · &nbsp;';
+              echo '<a href="'. $tags->permalink .'" style="color:#95A5A6;text-shadow: 0 0 1px rgba(0,0,0,.1);">'. $tags->name .'</a>&nbsp; · &nbsp;';
             endwhile;
           echo '<br>';
         }
@@ -131,7 +131,7 @@ $i=0;
           echo '<span>Page</span> · &nbsp;';
           $this->widget('Widget_Contents_Page_List')->to($pages);
             while($pages->next()):
-              echo '<a href="'. $pages->permalink .'" style="color:#95A5A6;">'. $pages->title .'</a>&nbsp; · &nbsp;';
+              echo '<a href="'. $pages->permalink .'" style="color:#95A5A6;text-shadow: 0 0 1px rgba(0,0,0,.1);">'. $pages->title .'</a>&nbsp; · &nbsp;';
             endwhile;
           echo '<br>';
         }

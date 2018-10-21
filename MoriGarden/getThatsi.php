@@ -43,7 +43,7 @@ if ($GLOBALS['bangumi']!='') {
         if ($bgm[$i]['ep_status'] < $eps || $bgm[$i]['subject']['eps']=='0' || $bgm[$i]['subject']['eps']==''){ 
             $proc=$bgm[$i]['ep_status'].'/'.$eps;
             $img=$bgm[$i]['subject']['images']['large'];
-            $img=str_replace('http://lain.bgm.tv','https://dn-loliamcover.qbox.me',$img);
+            $img=str_replace('http://lain.bgm.tv','https://lain.bgm.tv',$img);
             echo '<div class="arc-t"><div class="arc-tile"><div style="box-shadow: 0 2px 15px 1px rgba(0,0,0,0.1);width:60%;max-height:150px;float:left;margin-right:5px;"><img src="'.$img.'" data-action="zoom" class="img-rounded img-responsive"></div><small><a target="_blank" href="'.$bgm[$i]['subject']['url'].'">'.$name_cn.'</a></small><br><span class="arc-date">&'.$bgm[$i]['name'].'</span><br><span class="arc-date">进度：'.$proc.'</span><br><span class="arc-date">首播：'.$bgm[$i]['subject']['air_date'].'</span><br><span class="arc-date">放送：'.$weekday.'</span><br><span class="arc-date">最近：'.date('Y-m-d',$bgm[$i]['lasttouch']).'</span></div></div>';
         } 
     }
