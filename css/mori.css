@@ -105,7 +105,10 @@ body::before {
   }
 }
 hr {
-  border-top: 1px dashed #cfd8dc7a!important;
+  border-top: 1px dashed #cfd8dc7a !important;
+}
+.post-content {
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
 }
 .post-content p,.post-content li {
   font-size: 16px;
@@ -134,7 +137,7 @@ hr {
   margin-left: -1px;
 }
 .post-content h4 {
-  font-size: 1.2em;
+  font-size: 1.15em;
   color:#546e7a;
   font-weight: 400;
   margin-top: 25px;
@@ -143,6 +146,7 @@ hr {
 }
 .post-content h4::before{
   margin-right: 6px;
+  font-weight: 600;
   content: "#"; 
   color:#e8a6a6;
 }
