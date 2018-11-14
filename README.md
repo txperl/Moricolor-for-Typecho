@@ -6,15 +6,13 @@
 > Moricolor Chapter I 现已发布
 > 
 > 欢迎体验使用
-> 
-> [MoriColor for Hexo](https://github.com/Anapopo/Moricolor-for-Hexo) by Anapopo
 
 
 ***Demo1***: [Yumoe][1]
 
 ***Demo2***: [猫与向日葵](https://imjad.cn/)
 
-***Demo3***: [KIKOのSPACE(Hexo)](https://blog.kiko.space/)
+[MoriColor for Hexo](https://github.com/Anapopo/Moricolor-for-Hexo) by Anapopo.
 
 ----------
 
