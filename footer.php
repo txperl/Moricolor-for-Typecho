@@ -9,7 +9,7 @@
     <script src="<?php $this->options->themeUrl('js/prism.js'); ?>"></script>
     <script type="text/javascript">
       function getHitokoto() {
-        hitokoto=$.ajax({url:"http://hitokoto.jijidown.com/v2/api/hitokoto?maxlength=30&count=1",async:false,dataType:'json'});
+        hitokoto=$.ajax({url:"https://hitokoto.jijidown.com/v2/api/hitokoto?maxlength=30&count=1",async:false,dataType:'json'});
         $("#hitokoto").html("Hitokoto&nbsp; · &nbsp;&nbsp;"+hitokoto.responseJSON.res[0].hitokoto+'&nbsp;——《'+hitokoto.responseJSON.res[0].source+"》");
       }
 
