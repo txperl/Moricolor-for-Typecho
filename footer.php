@@ -9,8 +9,8 @@
     <script src="<?php $this->options->themeUrl('js/prism.js'); ?>"></script>
     <script type="text/javascript">
       function getHitokoto() {
-        hitokoto=$.ajax({url:"https://api.imjad.cn/hitokoto/",async:false});
-        $("#hitokoto").html("Hitokoto&nbsp; · &nbsp;&nbsp;"+hitokoto.responseText);
+        hitokoto=$.ajax({url:"http://hitokoto.jijidown.com/v2/api/hitokoto?maxlength=30&count=1",async:false,dataType:'json'});
+        $("#hitokoto").html("Hitokoto&nbsp; · &nbsp;&nbsp;"+hitokoto.responseJSON.res[0].hitokoto+'&nbsp;——《'+hitokoto.responseJSON.res[0].source+"》");
       }
 
       $(document).ready(function() {
@@ -28,8 +28,8 @@
             $("#comments").fadeIn(1000);
           }
         }
-        $("#thatsi").fadeIn(1300); 
-        $("#footer").css('display','block'); 
+        $("#thatsi").fadeIn(1300);
+        $("#footer").css('display','block');
         <?php if($this->is('post')): ?>
         // 锚点平滑滚动
         $('a[href*=#],area[href*=#]').click(function() {
@@ -80,16 +80,16 @@
         $("#getT").click(function(){
           $('#thatsi').html("<center><small>loading...</small></center>");
           $.post( '<?php $this->options->themeUrl('./MoriGarden/getThatsi.php'); ?>', { 'value' : 'done' },function(data){
-          if( data != '' ) 
+          if( data != '' )
             $('#thatsi').html(data).css('display','none');
-            $("#thatsi").fadeIn(400); 
+            $("#thatsi").fadeIn(400);
           });
         });
       });
     </script>
     <?php endif; ?>
 
-    <?php 
+    <?php
     if($this->is('post') or $this->is('page')){
       if ($GLOBALS['style_CommentShow']=='on') {
         echo '<script>$("#comments").fadeIn(1000);</script>';
@@ -97,7 +97,7 @@
     }
     ?>
 
-    <?php 
+    <?php
     if($this->is('index')){
       if ($GLOBALS['bottomTools_hitokoto']=='on') {
         echo '<script>getHitokoto();</script>';
