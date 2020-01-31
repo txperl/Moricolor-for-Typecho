@@ -8,9 +8,7 @@
 > 欢迎体验使用
 
 
-***Demo1***: [Yumoe][1]
-
-***Demo2***: [猫与向日葵](https://imjad.cn/)
+***Demo1***: [Yumoe v2][1]
 
 [MoriColor for Hexo](https://github.com/Anapopo/Moricolor-for-Hexo) by Anapopo.
 
@@ -18,9 +16,6 @@
 
 
 ### Moricolor Chapter I
-
-#### 预览图
-[主页1](https://dn-loliamp.qbox.me/1.png) & [主页背景图](https://dn-loliamp.qbox.me/M11.png) & [MoriGarden](https://dn-loliamp.qbox.me/4.png) & [文章1](https://dn-loliamp.qbox.me/3.png) & [文章2](https://dn-loliamp.qbox.me/M21.png)
 
 #### 细节
 
@@ -62,7 +57,7 @@ $GLOBALS['style_BGPic'] = ''; //博客背景图设置(填入图片链接)，留�
 $GLOBALS['style_FontWeight'] = 'normal'; //字体粗细 | normal:默认 | lighter:细 | bolder:粗
 //因有些背景图与原主题风格不同，你可以将'style_FontWeight'设置为 lighter 再更换一下配色，这样整体性会高一些
 
-//配色 全局配色设定(请自行复制粘贴以下相应数组) | 初版,只包含小部分颜色调整(文章配色请自行在mori.css中更改)
+//配色 全局配色设定(请自行复制粘贴以下相应数组) | 初版,只包含小部分颜色调整(文章配色请自行在 mori.css 中更改)
 //Mori(森) - array('Mori')
 //H(类似黑) - array('','#546e7a','#90a4ae','#90a4ae')
 //Q(应该青) - array('','#00838f','#00acc1','#00acc1')
@@ -74,13 +69,17 @@ $GLOBALS['style_Color'] = array('Mori');
 $GLOBALS['beta_MoriGarden'] = 'off'; //开启后请自行修改 ./MoriGarden/config.php 配置，否则会出事情的！
 ```
 
+
 **MoriGarden[Beta]**
+
 MoriGarden是基于Thatsi的一个简单例子  
 这个工具可将你的社交平台动态与博客同步，开启后位于主页底部  
 目前包含如下内容：  
-twitter: 以时间轴顺序，获取对应id(是@后面的名称)的公开推文（墙内也可使用）  
-bangumi: 以时间轴顺序，获取对应id(是@后面的名称)的在看番剧 （这个应该只有二次元迷会用得到吧，我反正是用了...）  
-P.s. 因为测试阶段默认使用我个人注册的API TOKEN,所以请勿随意或恶意提交
+twitter: 以时间轴顺序，获取对应 id (@后面的名称)的公开推文（墙内也可使用）  
+bangumi: 以时间轴顺序，获取对应 id (@后面的名称)的在看番剧 （这个应该只有二次元迷会用得到吧，我反正是用了...）  
+bilibili: 以时间轴顺序，获取对应 id 的在看番剧  
+P.s. 因为测试阶段默认使用我个人注册的 API TOKEN,所以请勿随意或恶意提交
+
 
 **本主题包含一套 Material Design 图标**
 
@@ -88,17 +87,15 @@ P.s. 因为测试阶段默认使用我个人注册的API TOKEN,所以请勿随�
 
 详细情况请参考 [Material Design Iconic Font][2]
 
+
 **配色参考**
 
  - [Flat UI 设计规范配色][3]
  - [Material Design Color][4]
 
-**Zoom.js使用 [图片缩放]**
-```html 
-<img src="{img_url}" data-action="zoom" class="img-rounded img-responsive">
-```
 
 **Prism.js使用 [代码高亮]**
+
 只有部分语言适用，若想支持更多请去官网自行下载
 ```html
 <pre><code class="language-xxx">{your_code}</code></pre>
@@ -110,26 +107,34 @@ P.s. 因为测试阶段默认使用我个人注册的API TOKEN,所以请勿随�
 ```
 </code></pre>
 
+
 **封面图设置**
+
 在文章中加入
 ```html 
 <!-- img_quick:img_url; -->
 ```
 为了整体样式的美观性，建议 图片宽度 >= 980px
 
+
 **自定义快速预览内容**
+
 在文章中加入
 ```html 
 <!-- des_quick:your_words; -->
 ```
 将 your_words 改成你需要的内容即可
 
+
 **配色与背景图与字体粗细相关**
+
 目前配色只是一个初版，所以很不完善  
 关于背景图，设置一下淡灰风格的图片会显得不那么奇怪  
 字体粗细如果没有更改，但你添加了背景图，可以试着改成 lighter 或 bolder ，这样样式整体性会高一些
 
+
 **其他注意事项**
+
 1. 本主题引用了多个本地资源，若是访问速度明显下降，请自行将本地资源上传到CDN或使用其他解决方案
 2. 文章目录导航仅支持 h3,h4 层级，并且手机端不会显示
 3. 更多问题可以询问作者
@@ -148,13 +153,17 @@ P.s. 因为测试阶段默认使用我个人注册的API TOKEN,所以请勿随�
 
 #### 更新日志
 ##### Chapter I
+ - **[v1.5]**
+ - 微调 `<h4>,<h5>,<img>` 标签样式
+ - 微调 MoriGarden bilibili 功能与样式
+ - 更改 一言 API 更换为『api.imjad.cn』
  - **[v1.4]**
  - 全新 [MoriColor for Hexo](https://github.com/Anapopo/Moricolor-for-Hexo) 主题 (感谢 Anapopo)
  - 微调 `<h4>,<a>,<li>` 标签样式
  - 微调 背景图片灰度取值
  - 微调 页面细节
- - 更改 一言 API 更换为 『api.imjad.cn』
- - 更改 主题资源 CDN(CloudflareCDN→StaticfileCDN)
+ - 更改 一言 API 更换为『api.imjad.cn』
+ - 更改 主题资源 CDN(CloudflareCDN → StaticfileCDN)
  - 更改 MoriGarden 基于重写版的 Thatsi
  - **[v1.3]**
  - 修复 文章导航重名替换 BUG

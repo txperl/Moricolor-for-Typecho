@@ -107,6 +107,9 @@ body::before {
 hr {
   border-top: 1px dashed #cfd8dc7a !important;
 }
+.post {
+  position: relative;
+}
 .post-content {
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
 }
@@ -126,50 +129,46 @@ hr {
 }
 .post-content h1 {
   font-size: 2.4em;
-  margin-left: -1px;
 }
 .post-content h2 {
   font-size: 1.8em;
-  margin-left: -1px;
 }
 .post-content h3 {
   font-size: 1.6em;
-  margin-left: -1px;
 }
 .post-content h4 {
-  font-size: 1.15em;
+  font-size: 1.2em;
+  line-height: 1.5em;
   color:#546e7a;
   font-weight: 400;
-  margin-top: 25px;
-  margin-bottom: 10px;
-  margin-left: -.5em;
 }
 .post-content h4::before{
-  margin-right: 6px;
-  font-weight: 600;
+  position: absolute;
+  left: -20px;
+  font-weight: 500;
   content: "#"; 
   color:#e8a6a6;
 }
 .post-content h5 {
+  font-size: 1.1em;
+  line-height: 1.5em;
   color:#546e7a;
   font-weight: normal;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  margin-left: -2px;
-  font-size: 1.1em;
 }
 .post-content h5::before {
+  position: absolute;
+  margin-top: 1px;
+  left: -16px;
   color:#546e7a;
-  font-family: 'Material-Design-Iconic-Font';
-  margin-right: 6px;
-  content: "\f184"; 
+  content: "&";
+  font-size: 15px;
+  font-weight: 600;
 }
 .post-content h6{
   color:#78909c;
   font-weight: normal;
   font-size: 1em;
   font-weight: 300;
-  margin-left: -2px;
 }
 .post-content ul li{
   text-indent: 0;
@@ -238,11 +237,10 @@ hr {
   border-radius: 6px;
   box-shadow: 0 2px 15px 0px rgba(0,0,0,0.1);
   display:block;
-  margin:0 auto;
   text-align: center;
-  width: 100% \9;
-  max-width: 100%;
   height: auto;
+  max-width: 90%;
+  margin: 0 5%;
 }
 }
 .description p {
@@ -382,6 +380,14 @@ hr {
   .post-content ul,.post-list,.tags-list {
     margin-left: -1em;
     margin-right: 1em;
+  }
+  .post-content h4::before{
+    position: inherit;
+    margin-right: 5px;
+  }
+  .post-content h5::before{
+    position: inherit;
+    margin-right: 2px;
   }
 }
 .tarc-t {
