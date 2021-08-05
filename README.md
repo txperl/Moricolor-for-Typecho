@@ -67,8 +67,13 @@ $GLOBALS['style_Color'] = array('Mori');
 > 
 //前方有怪兽！
 $GLOBALS['beta_MoriGarden'] = 'off'; //开启后请自行修改 ./MoriGarden/config.php 配置，否则会出事情的！
+$GLOBALS['support_pjax'] = 'off'; //开启后默认支持NProgress，且原生评论无法使用！（修改3天后任然无法实现ajax评论......）
 ```
+**Support pjax**
 
+通过使用pjax你可以使用悬浮播放音乐的插件，并且减少你服务器的负载。
+缺点是你无法使用原生评论！！！你可以通过插件AjaxComments来增加对评论的支持。同时对你的SEO有影响。
+其他功能已经通过修改码以提供支持。
 
 **MoriGarden[Beta]**
 
@@ -150,9 +155,18 @@ P.s. 因为测试阶段默认使用我个人注册的 API TOKEN,所以请勿随�
  - [jQuery][8]
  - [zoom_vanilla.js][9]
  - [Prism.js][10]
+ - [NProgress][11]
+ - [pjax][12]
+ - [MathJax][13]
 
 #### 更新日志
 ##### Chapter I
+ - **[v1.5Plus]**
+ - 新增 对pjax的支持（可选）
+ - 新增 NProgress动画（需pjax支持）
+ - 新增 MathJax的渲染
+ - 优化 Markdown语法增强
+ - 优化 表格样式
  - **[v1.5]**
  - 微调 `<h4>,<h5>,<img>` 标签样式
  - 微调 MoriGarden bilibili 功能与样式
@@ -230,3 +244,6 @@ P.s. 因为测试阶段默认使用我个人注册的 API TOKEN,所以请勿随�
   [8]: http://jquery.com/
   [9]: https://github.com/spinningarrow/zoom-vanilla.js
   [10]: http://prismjs.com/
+  [11]: https://github.com/rstacruz/nprogress
+  [12]: https://github.com/defunkt/jquery-pjax
+  [13]: https://github.com/mathjax/MathJax

@@ -39,3 +39,4 @@ $GLOBALS['style_Color'] = array('Mori');
 
 //前方有怪兽！
 $GLOBALS['beta_MoriGarden'] = 'off'; //开启后请自行修改 ./MoriGarden/config.php 配置，否则会出事情的！
+$GLOBALS['support_pjax'] = 'on'; //开启后原生评论无法使用！

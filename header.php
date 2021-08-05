@@ -39,7 +39,7 @@ $index_img = $GLOBALS['index_Image'];
           ), '', ' - '); ?><?php $this->options->title(); ?></title>
 
   <link href="<?php $this->options->themeUrl('./css/mori.css'); ?>" rel="stylesheet">
-  <link href="<?php $this->options->themeUrl('./css/vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
+  <link href="<?php $this->options->themeUrl('./css/vendor/bootstrap/css/bootstrap.css'); ?>" rel="stylesheet">
   <link href="<?php $this->options->themeUrl('./css/flat-ui.min.css'); ?>" rel="stylesheet">
   <link href="<?php $this->options->themeUrl('./css/prism.css'); ?>" rel="stylesheet">
   <link href="<?php $this->options->themeUrl('./fonts/md/css/material-design-iconic-font.min.css'); ?>" rel="stylesheet">
@@ -53,18 +53,46 @@ $index_img = $GLOBALS['index_Image'];
 </head>
 
 <body>
-  <header>
-    <?php if (!$this->is('post')) : ?>
-      <div class="container" id="main">
-        <a id="logo" href="<?php $this->options->siteUrl(); ?>">
-          <?php if ($this->options->logoUrl) : ?>
-            <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
-          <?php endif; ?>
-          <h1 style="color: #34495e;"><?php $this->options->title() ?></h1>
-        </a>
-        <p class="description"><?php $this->options->description() ?></p>
-        <hr>
-      </div>
-    <?php endif; ?>
+<script src="<?php $this->options->themeUrl('js/vendor/jquery.min.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('js/zoom-js/js/zoom.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('js/vendor/bootstrap.js'); ?>"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<!-- <script src="<?php $this->options->themeUrl('js/vendor/video.js'); ?>"></script> -->
+<script src="<?php $this->options->themeUrl('js/flat-ui.min.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('js/prism.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('js/vendor/jquery.pjax.js'); ?>"></script>
+<script src="<?php $this->options->themeUrl('js/nprogress.js'); ?>"></script>
+<link href="<?php $this->options->themeUrl('css/nprogress.css'); ?>" rel="stylesheet">
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			elements:["all"],
+			showProcessingMessages:false,
+			messageStyle:"none",
+			extensions:["tex2jax.js"],
+			jax:["input/TeX","output/HTML-CSS"],
+			tex2jax:{
+				inlineMath:[["$","$"],["\\(","\\)"]],
+				displayMath:[["$$","$$"],["\\[","\\]"]],
+				processEscapes:true
+			},
+			"HTML-CSS":{availableFonts:["TeX"]}
+		});
+</script>
+<div id="all">  
+  <div class="container" id="main">
+    <header>
+      <?php if (!$this->is('post')) : ?>
+        <div class="container" id="main">
+          <a id="logo" href="<?php $this->options->siteUrl(); ?>">
+            <?php if ($this->options->logoUrl) : ?>
+              <img src="<?php $this->options->logoUrl() ?>" alt="<?php $this->options->title() ?>" />
+            <?php endif; ?>
+            <h1 style="color: #34495e;"><?php $this->options->title() ?></h1>
+          </a>
+          <p class="description"><?php $this->options->description() ?></p>
+          <hr>
+        </div>
+      <?php endif; ?>
 
   </header>
