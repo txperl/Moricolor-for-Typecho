@@ -50,9 +50,40 @@ $index_img = $GLOBALS['index_Image'];
       <script src="<?php $this->options->themeUrl('./js/vendor/respond.min.js'); ?>"></script>
     <![endif]-->
   <?php $this->header(); ?>
+  <!-- JS置于此处，方便JS重载 -->
+  <script src="<?php $this->options->themeUrl('js/vendor/jquery.min.js'); ?>"></script>
+  <script src="<?php $this->options->themeUrl('js/zoom-js/js/zoom.js'); ?>"></script>
+  <script src="<?php $this->options->themeUrl('js/vendor/bootstrap.js'); ?>"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!-- <script src="<?php $this->options->themeUrl('js/vendor/video.js'); ?>"></script> -->
+  <script src="<?php $this->options->themeUrl('js/flat-ui.min.js'); ?>"></script>
+  <script src="<?php $this->options->themeUrl('js/prism.js'); ?>"></script>
+  <!-- pjax实现 -->
+  <script src="<?php $this->options->themeUrl('js/jquery.pjax.js'); ?>"></script>
+  <!-- nprogress进度条 -->
+  <script src="<?php $this->options->themeUrl('js/nprogress.js'); ?>"></script>
+  <link href="<?php $this->options->themeUrl('css/nprogress.css'); ?>" rel="stylesheet">
+  <!-- MathJax渲染 -->
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+  <script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+			  elements:["all"],
+			  showProcessingMessages:false,
+			  messageStyle:"none",
+			  extensions:["tex2jax.js"],
+			  jax:["input/TeX","output/HTML-CSS"],
+			  tex2jax:{
+				  inlineMath:[["$","$"],["\\(","\\)"]],
+				  displayMath:[["$$","$$"],["\\[","\\]"]],
+				  processEscapes:true
+			  },
+			  "HTML-CSS":{availableFonts:["TeX"]}
+		  });
+  </script>
 </head>
 
 <body>
+<div id="all">
   <header>
     <?php if (!$this->is('post')) : ?>
       <div class="container" id="main">
