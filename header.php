@@ -65,10 +65,11 @@ $index_img = $GLOBALS['index_Image'];
   <link href="<?php $this->options->themeUrl('css/nprogress.css'); ?>" rel="stylesheet">
   <!-- MathJax渲染 -->
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
-  <!-- 预加载 -->
+  <!-- 预加载、黑幕实现、网站LOGO -->
   <?php if ($GLOBALS['beta_MoreFunctions'] == 'on') : ?>
     <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
     <link href="<?php $this->options->themeUrl('./css/black-curtain.css'); ?>" rel="stylesheet">
+    <link rel="shortcut icon" href="" type="image/x-icon">
   <?php endif; ?>
   <script type="text/x-mathjax-config">
 		  MathJax.Hub.Config({

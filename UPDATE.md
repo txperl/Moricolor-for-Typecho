@@ -1,11 +1,16 @@
-### UPDATE 1.3
+### UPDATE 1.4
 
 各位朋友好，我这次对`moricolor v1.5`做出了如下更改
 
 ##### 添加了
 
-- 黑幕功能！！！
-  - 用法：` <span class="bc" title="你想写的"> 这里是黑幕遮挡的内容 </span>`
+- 网站图标支持
+  - 用法：`<link rel="shortcut icon" href="logo的位置" type="image/x-icon">`，**请使用`.ico`文件**
+
+##### 修复了
+
+- `header.php`中一处注释缺失
+
 
 ##### 已知的问题
 
@@ -14,6 +19,13 @@
 ------
 
 ### 历代更新
+
+##### v 1.3
+
+添加了
+
+- 黑幕功能！！！
+  - 用法：` <span class="bc" title="你想写的"> 这里是黑幕遮挡的内容 </span>`
 
 ##### v 1.2
 
