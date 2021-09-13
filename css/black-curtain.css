@@ -1,0 +1,22 @@
+.bc, .bc a, a .bc, .bc a.new {
+    background-color: #252525;
+    color: #252525;
+    text-shadow: none;
+}
+
+.bc:hover, .bc:active,
+.bc:hover .bc, .bc:active .bc {
+    color: white !important;
+}
+
+.bc:hover a, a:hover .bc,
+.bc:active a, a:active .bc {
+    color: lightblue !important;
+}
+
+.bc:hover .new, .bc .new:hover, .new:hover .bc,
+.bc:active .new:hover, .bc .new:active, .new:active .bc {
+    color: #BA0000 !important;
+}
+
+/* 代码来自萌娘百科 https://zh.moegirl.org.cn/MediaWiki:Mobile.css https://zh.moegirl.org/MediaWiki:Common.css */

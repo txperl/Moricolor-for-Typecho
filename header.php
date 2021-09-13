@@ -68,6 +68,7 @@ $index_img = $GLOBALS['index_Image'];
   <!-- 预加载 -->
   <?php if ($GLOBALS['beta_MoreFunctions'] == 'on') : ?>
     <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    <link href="<?php $this->options->themeUrl('./css/black-curtain.css'); ?>" rel="stylesheet">
   <?php endif; ?>
   <script type="text/x-mathjax-config">
 		  MathJax.Hub.Config({
