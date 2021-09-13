@@ -1,23 +1,37 @@
-### UPDATE 1.0
+### UPDATE 1.1
 
-各位朋友好，我对`moricolor v1.5`做出了如下更改
+各位朋友好，我这次对`moricolor v1.5`做出了如下更改
 
 ##### 添加了
 
-- pjax支持
-- MathJax的渲染
-- 黑暗模式
+- 预加载
+  
+##### 优化了
 
-##### 修复了
-
-- 表格显示不佳
+- ~~本页面排版不好~~
 
 ##### 已知的问题
 
-- 使用pjax后评论无法正常使用，可以配套[AjaxComments - GitHub](https://github.com/visamz/AjaxComments)使用
+- [遗留问题] 使用 pjax 后评论无法正常使用，可以配套 [AjaxComments - GitHub](https://github.com/visamz/AjaxComments) 使用
 
-##### 写在最后
+------
 
-由于本人css技术不好，另我觉得我写黑暗模式的css的味道可能与原css的味道有很大出入，导致风格不同，故只留了一个想法在js内。为什么不用反色呢？这个，谁用谁知道
+### 历代更新
 
-AjaxComments这个插件需要各位自己调试，我已经试过可以正常运行并回复且不需要关闭原生垃圾评论检测。
+##### v1.0
+
+添加了
+
+- pjax 支持
+- MathJax 的渲染
+- 黑暗模式
+
+修复了
+
+- 表格显示不佳
+
+------
+
+### 写在最后
+
+这次没啥好写的

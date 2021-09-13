@@ -65,6 +65,8 @@ $index_img = $GLOBALS['index_Image'];
   <link href="<?php $this->options->themeUrl('css/nprogress.css'); ?>" rel="stylesheet">
   <!-- MathJax渲染 -->
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+  <!-- 预加载 -->
+  <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
   <script type="text/x-mathjax-config">
 		  MathJax.Hub.Config({
 			  elements:["all"],
