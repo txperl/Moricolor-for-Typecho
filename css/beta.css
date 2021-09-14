@@ -1,3 +1,23 @@
+#totop {
+    display: none;
+    background-color: #34495e;
+    color: white;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    width: 40px; 
+    height: 40px; 
+    border-radius:50%;
+    border: none
+}
+  
+#totop:hover {
+    background-color: #555;
+}
+
+/* 以下代码基础来自萌娘百科 https://zh.moegirl.org.cn/MediaWiki:Mobile.css https://zh.moegirl.org/MediaWiki:Common.css */
+
 .bc, .bc a, a .bc, .bc a.new {
     background-color: #252525;
     color: #252525;
@@ -18,5 +38,3 @@
 .bc:active .new:hover, .bc .new:active, .new:active .bc {
     color: #BA0000 !important;
 }
-
-/* 代码来自萌娘百科 https://zh.moegirl.org.cn/MediaWiki:Mobile.css https://zh.moegirl.org/MediaWiki:Common.css */

@@ -58,17 +58,19 @@ $index_img = $GLOBALS['index_Image'];
   <!-- <script src="<?php $this->options->themeUrl('js/vendor/video.js'); ?>"></script> -->
   <script src="<?php $this->options->themeUrl('js/flat-ui.min.js'); ?>"></script>
   <script src="<?php $this->options->themeUrl('js/prism.js'); ?>"></script>
-  <!-- pjax实现 -->
-  <script src="<?php $this->options->themeUrl('js/jquery.pjax.js'); ?>"></script>
-  <!-- nprogress进度条 -->
-  <script src="<?php $this->options->themeUrl('js/nprogress.js'); ?>"></script>
-  <link href="<?php $this->options->themeUrl('css/nprogress.css'); ?>" rel="stylesheet">
-  <!-- MathJax渲染 -->
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
-  <!-- 预加载、黑幕实现、网站LOGO -->
   <?php if ($GLOBALS['beta_MoreFunctions'] == 'on') : ?>
+    <!-- pjax实现 -->
+    <script src="<?php $this->options->themeUrl('js/jquery.pjax.js'); ?>"></script>
+    <!-- nprogress进度条 -->
+    <script src="<?php $this->options->themeUrl('js/nprogress.js'); ?>"></script>
+    <link href="<?php $this->options->themeUrl('css/nprogress.css'); ?>" rel="stylesheet">
+    <!-- MathJax渲染 -->
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+    <!-- 预加载 -->
     <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
-    <link href="<?php $this->options->themeUrl('./css/black-curtain.css'); ?>" rel="stylesheet">
+    <!-- 黑幕实现、快速回到顶部 -->
+    <link href="<?php $this->options->themeUrl('./css/beta.css'); ?>" rel="stylesheet">
+    <!-- 网站LOGO -->
     <link rel="shortcut icon" href="" type="image/x-icon">
   <?php endif; ?>
   <script type="text/x-mathjax-config">
@@ -90,6 +92,7 @@ $index_img = $GLOBALS['index_Image'];
 
 <body>
 <div id="all">
+  <button onclick="topFunction()" id="totop">^</button>
   <header>
     <?php if (!$this->is('post')) : ?>
       <div class="container" id="main">

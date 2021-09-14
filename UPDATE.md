@@ -1,24 +1,49 @@
-### UPDATE 1.4
+### UPDATE 1.5
 
-各位朋友好，我这次对`moricolor v1.5`做出了如下更改
+本次更新做出如下更改
 
 ##### 添加了
 
-- 网站图标支持
-  - 用法：`<link rel="shortcut icon" href="logo的位置" type="image/x-icon">`，**请使用`.ico`文件**
+- 快速回到顶部
 
 ##### 修复了
 
-- `header.php`中一处注释缺失
-
+- 部分资源在 UPDATE 功能未开启之前就加载了
+- 将 css 集合在`beta.css`内
 
 ##### 已知的问题
 
-- [遗留问题] 使用 pjax 后评论无法正常使用，可以配套 [AjaxComments - GitHub](https://github.com/visamz/AjaxComments) 使用 （欲了解更多请查看 v 1.0 的commit）
+- [遗留问题] 使用 pjax 后评论无法正常使用，可以配套 [AjaxComments - GitHub](https://github.com/visamz/AjaxComments) 使用 （欲了解更多请查看 v 1.0 的 commit ）
+
+------
+
+### 测试进度
+
+还没开始呢！
+
+------
+
+### ~~画大饼~~计划中！UPDATE 2 系列 ！
+
+- [ ] 测试 UPDATE 1 系列
+- [ ] 整合 [AllsitePasswd - GitHub](https://github.com/gogobody/AllsitePasswd) （全站加密）
+- [ ] 整合 [AjaxComments - GitHub](https://github.com/visamz/AjaxComments)  （Ajax评论）
+- [ ] 整合 [PartiallyPassword - GitHub](https://github.com/wuxianucw/PartiallyPassword) （加密部分段落）
 
 ------
 
 ### 历代更新
+
+##### v 1.4
+
+添加了
+
+- 网站图标支持
+  - 用法：`<link rel="shortcut icon" href="logo的位置" type="image/x-icon">`，**请使用`.ico`文件**
+
+修复了
+
+- `header.php`中一处注释缺失
 
 ##### v 1.3
 
@@ -50,7 +75,7 @@
 
 - pjax 支持
 - MathJax 的渲染
-- 黑暗模式 （仅想法，未实现，原因请查看 v 1.0 的commit）
+- 黑暗模式 （仅想法，未实现，原因请查看 v 1.0 的 commit ）
 
 修复了
 
@@ -60,4 +85,6 @@
 
 ### 写在最后
 
-这次没什么好说的
+整合插件，这玩意可行吗？我没试过，也没看到类似的文章。
+
+如果原作者同意且有可能的化，我也会尽快（鸽子预定）整合以上插件。
