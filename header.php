@@ -93,6 +93,7 @@ $index_img = $GLOBALS['index_Image'];
 
 <body>
 <div id="all">
+  <button onclick="topFunction()" id="totop">^</button>
   <header>
     <?php if (!$this->is('post')) : ?>
       <div class="container" id="main">

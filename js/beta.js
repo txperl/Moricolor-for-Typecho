@@ -13,4 +13,4 @@ $(document).on('pjax:complete', function() {
     if (typeof MathJax !== 'undefined'){
         MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
     } // MathJax重载
-}); 
+});
