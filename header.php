@@ -58,16 +58,22 @@ $index_img = $GLOBALS['index_Image'];
   <!-- <script src="<?php $this->options->themeUrl('js/vendor/video.js'); ?>"></script> -->
   <script src="<?php $this->options->themeUrl('js/flat-ui.min.js'); ?>"></script>
   <script src="<?php $this->options->themeUrl('js/prism.js'); ?>"></script>
-  <!-- pjax实现 -->
-  <script src="<?php $this->options->themeUrl('js/jquery.pjax.js'); ?>"></script>
-  <!-- nprogress进度条 -->
-  <script src="<?php $this->options->themeUrl('js/nprogress.js'); ?>"></script>
-  <link href="<?php $this->options->themeUrl('css/nprogress.css'); ?>" rel="stylesheet">
-  <!-- MathJax渲染 -->
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
-  <!-- 预加载 -->
-  <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
-  <script type="text/x-mathjax-config">
+  <?php if ($GLOBALS['beta_MoreFunctions'] == 'on') : ?>
+    <script src="<?php $this->options->themeUrl('js/beta.js'); ?>"></script>
+    <!-- pjax实现 -->
+    <script src="<?php $this->options->themeUrl('js/jquery.pjax.js'); ?>"></script>
+    <!-- nprogress进度条 -->
+    <script src="<?php $this->options->themeUrl('js/nprogress.js'); ?>"></script>
+    <link href="<?php $this->options->themeUrl('css/nprogress.css'); ?>" rel="stylesheet">
+    <!-- 黑幕 -->
+    <link href="<?php $this->options->themeUrl('./css/beta.css'); ?>" rel="stylesheet">
+    <!-- 预加载 -->
+    <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+    <!-- 网站LOGO -->
+    <link rel="shortcut icon" href="/usr/themes/Moricolor-for-Typecho/logo.ico" type="image/x-icon" />
+    <!-- MathJax渲染 -->
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
+    <script type="text/x-mathjax-config">
 		  MathJax.Hub.Config({
 			  elements:["all"],
 			  showProcessingMessages:false,
@@ -81,7 +87,8 @@ $index_img = $GLOBALS['index_Image'];
 			  },
 			  "HTML-CSS":{availableFonts:["TeX"]}
 		  });
-  </script>
+    </script>
+  <?php endif; ?>
 </head>
 
 <body>
@@ -101,3 +108,26 @@ $index_img = $GLOBALS['index_Image'];
     <?php endif; ?>
 
   </header>
+
+  <!-- 返回顶部 -->
+  <?php if ($GLOBALS['beta_MoreFunctions'] == 'on') : ?>
+    <button onclick="topFunction()" id="totop">^</button>
+    <script>
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          document.getElementById("totop").style.display = "block";
+        } else {
+          document.getElementById("totop").style.display = "none";
+        }
+      }
+
+      function topFunction() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      }
+    </script>
+  <?php endif; ?>

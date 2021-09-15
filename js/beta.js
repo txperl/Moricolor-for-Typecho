@@ -14,17 +14,3 @@ $(document).on('pjax:complete', function() {
         MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
     } // MathJax重载
 }); 
-
-/*
-显然以下代码为css代码，但它为什么它会在这呢？
-因为我懒得创建一个新文件了
-以下代码仅提供一个想法，并未实现黑暗模式
-*/
-
-/*
-@media (prefers-color-scheme: dark) {
-  :root {
-
-  }
-}
-*/
