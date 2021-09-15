@@ -1,15 +1,26 @@
-### UPDATE 1.5
+### UPDATE 2.0
 
 本次更新做出如下更改
 
-##### 添加了
+##### 增加了
 
-- 快速回到顶部
+- 默认的LOGO（蚌埠住了）
+
+##### 临时删除了
+
+- 登录选项
+- RSS 订阅按钮
 
 ##### 修复了
 
-- 部分资源在 UPDATE 功能未开启之前就加载了
-- 将 css 集合在`beta.css`内
+- 黑幕的正确使用方法
+```
+!!!
+<span class="bc" title="你想写的"> 这里是黑幕遮挡的内容 </span>
+!!! 
+```
+- **为了开发方便，`$GLOBALS['beta_MoreFunctions']`默认开启**
+- 向上滚动无法正常使用的问题
 
 ##### 已知的问题
 
@@ -19,13 +30,21 @@
 
 ### 测试进度
 
-还没开始呢！
+- 通过版本：
+  - v 1.0
+  - v 1.1
+  - v 1.3 —— 黑幕功能
+  - v 1.4 —— LOGO
+
+- 有Bug的版本 
+  - v 1.2
+  - v 1.5 —— 向上滚动
 
 ------
 
 ### ~~画大饼~~计划中！UPDATE 2 系列 ！
 
-- [ ] 测试 UPDATE 1 系列
+- [X] 测试 UPDATE 1 系列
 - [ ] 整合 [AllsitePasswd - GitHub](https://github.com/gogobody/AllsitePasswd) （全站加密）
 - [ ] 整合 [AjaxComments - GitHub](https://github.com/visamz/AjaxComments)  （Ajax评论）
 - [ ] 整合 [PartiallyPassword - GitHub](https://github.com/wuxianucw/PartiallyPassword) （加密部分段落）
@@ -33,6 +52,17 @@
 ------
 
 ### 历代更新
+
+##### v 1.5
+
+添加了
+
+- 快速回到顶部
+
+修复了
+
+- 部分资源在 UPDATE 功能未开启之前就加载了
+- 将 css 集合在`beta.css`内
 
 ##### v 1.4
 
@@ -85,6 +115,4 @@
 
 ### 写在最后
 
-整合插件，这玩意可行吗？我没试过，也没看到类似的文章。
-
-如果原作者同意且有可能的化，我也会尽快（鸽子预定）整合以上插件。
+没啥好说的
