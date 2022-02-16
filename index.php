@@ -117,7 +117,7 @@ $i = 0;
       //
       //一言
       if ($GLOBALS['bottomTools_hitokoto'] == 'on') {
-        echo '<div id="hitokoto">一言 Hitokoto</div>';
+        echo '<div id="hitokoto">Hitokoto&nbsp; · &nbsp;&nbsp;哒哒哒...</div>';
       }
       //分类
       if ($GLOBALS['bottomTools_category'] == 'on') {

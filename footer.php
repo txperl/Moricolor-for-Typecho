@@ -9,11 +9,16 @@
 <script src="<?php $this->options->themeUrl('js/prism.js'); ?>"></script>
 <script type="text/javascript">
   function getHitokoto() {
-    hitokoto = $.ajax({
-      url: "https://api.imjad.cn/hitokoto/",
-      async: false
+    $.ajax({
+      url: "https://v1.hitokoto.cn/",
+      async: true,
+      success: function(rep) {
+        $("#hitokoto").html("Hitokoto&nbsp; · &nbsp;&nbsp;" + rep.hitokoto);
+      },
+      error: function(err) {
+        $("#hitokoto").html("Hitokoto&nbsp; · &nbsp;&nbsp;哒哒哒！");
+      }
     });
-    $("#hitokoto").html("Hitokoto&nbsp; · &nbsp;&nbsp;" + hitokoto.responseText);
   }
 
   $(document).ready(function() {
