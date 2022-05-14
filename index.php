@@ -157,10 +157,10 @@ $i = 0;
       // 登录
       if ($GLOBALS['beta_MoreFunctions'] == 'on') {
         while ($this->user->hasLogin()) :
-          echo '<li class="last"><a href="<?php $this->options->adminUrl(); ?>"><?php _e('后台'); ?>'
+          echo '<li class="last"><a href="<?php $this->options->adminUrl(); ?>"><?php _e('后台'); ?>';
         endwhile;
         else :
-          echo '<li class="last"><a href="<?php $this->options->adminUrl('login.php'); ?>"><?php _e('登录'); ?></a>'
+          echo '<li class="last"><a href="<?php $this->options->adminUrl('login.php'); ?>"><?php _e('登录'); ?></a>';
       }
     }
     ?>
