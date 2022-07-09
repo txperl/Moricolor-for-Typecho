@@ -121,26 +121,26 @@ $i = 0;
       }
       //分类
       if ($GLOBALS['bottomTools_category'] == 'on') {
-        echo '<span style="padding-right: 1px;">Category</span> · &nbsp;';
+        echo '<span style="padding-right: 1px;">Category</span>';
         $this->widget('Widget_Metas_Category_List')
-          ->parse('<a style="color:#95A5A6;text-shadow: 0 0 1px rgba(0,0,0,.1);" href="{permalink}"> &{name} </a>&nbsp; · &nbsp;');
+          ->parse('&nbsp; · &nbsp;<a style="color:#95A5A6;text-shadow: 0 0 1px rgba(0,0,0,.1);" href="{permalink}"> &{name} </a>');
         echo '<br>';
       }
       //标签
       if ($GLOBALS['bottomTools_tag'] == 'on') {
-        echo '<span>Tag</span> · &nbsp;';
+        echo '<span>Tag</span>';
         $this->widget('Widget_Metas_Tag_Cloud')->to($tags);
         while ($tags->next()) :
-          echo '<a href="' . $tags->permalink . '" style="color:#95A5A6;text-shadow: 0 0 1px rgba(0,0,0,.1);">' . $tags->name . '</a>&nbsp; · &nbsp;';
+          echo '&nbsp; · &nbsp;<a href="' . $tags->permalink . '" style="color:#95A5A6;text-shadow: 0 0 1px rgba(0,0,0,.1);">' . $tags->name . '</a>';
         endwhile;
         echo '<br>';
       }
       //页面
       if ($GLOBALS['bottomTools_page'] == 'on') {
-        echo '<span>Page</span> · &nbsp;';
+        echo '<span>Page</span>';
         $this->widget('Widget_Contents_Page_List')->to($pages);
         while ($pages->next()) :
-          echo '<a href="' . $pages->permalink . '" style="color:#95A5A6;text-shadow: 0 0 1px rgba(0,0,0,.1);">' . $pages->title . '</a>&nbsp; · &nbsp;';
+          echo '&nbsp; · &nbsp;<a href="' . $pages->permalink . '" style="color:#95A5A6;text-shadow: 0 0 1px rgba(0,0,0,.1);">' . $pages->title . '</a>';
         endwhile;
         echo '<br>';
       }
