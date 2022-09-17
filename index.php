@@ -121,32 +121,43 @@ $i = 0;
       }
       //分类
       if ($GLOBALS['bottomTools_category'] == 'on') {
-        echo '<span style="padding-right: 1px;">Category</span> · &nbsp;';
+        echo '<span style="padding-right: 1px;">Category</span>';
         $this->widget('Widget_Metas_Category_List')
-          ->parse('<a style="color:#95A5A6;text-shadow: 0 0 1px rgba(0,0,0,.1);" href="{permalink}"> &{name} </a>&nbsp; · &nbsp;');
+          ->parse('&nbsp; · &nbsp;<a style="color:#95A5A6;text-shadow: 0 0 1px rgba(0,0,0,.1);" href="{permalink}"> &{name} </a>');
         echo '<br>';
       }
       //标签
       if ($GLOBALS['bottomTools_tag'] == 'on') {
-        echo '<span>Tag</span> · &nbsp;';
+        echo '<span>Tag</span>';
         $this->widget('Widget_Metas_Tag_Cloud')->to($tags);
         while ($tags->next()) :
-          echo '<a href="' . $tags->permalink . '" style="color:#95A5A6;text-shadow: 0 0 1px rgba(0,0,0,.1);">' . $tags->name . '</a>&nbsp; · &nbsp;';
+          echo '&nbsp; · &nbsp;<a href="' . $tags->permalink . '" style="color:#95A5A6;text-shadow: 0 0 1px rgba(0,0,0,.1);">' . $tags->name . '</a>&nbsp; · &nbsp;';
         endwhile;
         echo '<br>';
       }
       //页面
       if ($GLOBALS['bottomTools_page'] == 'on') {
-        echo '<span>Page</span> · &nbsp;';
+        echo '<span>Page</span>';
         $this->widget('Widget_Contents_Page_List')->to($pages);
         while ($pages->next()) :
-          echo '<a href="' . $pages->permalink . '" style="color:#95A5A6;text-shadow: 0 0 1px rgba(0,0,0,.1);">' . $pages->title . '</a>&nbsp; · &nbsp;';
+          echo '&nbsp; · &nbsp;<a href="' . $pages->permalink . '" style="color:#95A5A6;text-shadow: 0 0 1px rgba(0,0,0,.1);">' . $pages->title . '</a>&nbsp; · &nbsp;';
         endwhile;
+        echo '<br>';
+      }
+      // 登录
+      if ($GLOBALS['beta_MoreFunctions'] == 'on') {
+        if ($this->user->hasLogin()) {
+          echo '<span>Admin</span> ';
+          echo '&nbsp; · &nbsp;<a href="' . $this->options->adminUrl . '" style="color:#95A5A6;text-shadow: 0 0 1px rgba(0,0,0,.1);">' . $this->user->screenName . '</a>&nbsp; · &nbsp;';
+        }
+        else {
+          echo '<span>Login</span>';
+          echo '&nbsp; · &nbsp;<a href="' . $this->options->adminUrl . '" style="color:#95A5A6;text-shadow: 0 0 1px rgba(0,0,0,.1);">Click Here</a>&nbsp; · &nbsp;';
+        }
         echo '<br>';
       }
       echo '</section>';
       echo '</ul>';
-      //
       //搜索
       if ($GLOBALS['bottomTools_search'] == 'on') {
         echo '<form method="post">';
@@ -154,14 +165,6 @@ $i = 0;
         echo '</form>';
       }
       echo '</small>';
-      // 登录
-      if ($GLOBALS['beta_MoreFunctions'] == 'on') {
-        while ($this->user->hasLogin()) :
-          echo '<li class="last"><a href="<?php $this->options->adminUrl(); ?>"><?php _e('后台'); ?>';
-        endwhile;
-        else :
-          echo '<li class="last"><a href="<?php $this->options->adminUrl('login.php'); ?>"><?php _e('登录'); ?></a>';
-      }
     }
     ?>
   </div>
