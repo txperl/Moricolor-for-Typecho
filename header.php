@@ -37,58 +37,6 @@ $index_img = $GLOBALS['index_Image'];
             'tag'       =>  _t('%s'),
             'author'    =>  _t('%s')
           ), '', ' - '); ?><?php $this->options->title(); ?></title>
-
-  <link href="<?php $this->options->themeUrl('./css/mori.css'); ?>" rel="stylesheet">
-  <link href="<?php $this->options->themeUrl('./css/vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
-  <link href="<?php $this->options->themeUrl('./css/flat-ui.min.css'); ?>" rel="stylesheet">
-  <link href="<?php $this->options->themeUrl('./css/prism.css'); ?>" rel="stylesheet">
-  <link href="<?php $this->options->themeUrl('./fonts/md/css/material-design-iconic-font.min.css'); ?>" rel="stylesheet">
-  <link href="<?php $this->options->themeUrl('./js/zoom-js/css/zoom.css'); ?>" rel="stylesheet">
-  <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-  <!--[if lt IE 9]>
-      <script src="<?php $this->options->themeUrl('./js/vendor/html5shiv.js'); ?>"></script>
-      <script src="<?php $this->options->themeUrl('./js/vendor/respond.min.js'); ?>"></script>
-    <![endif]-->
-  <?php $this->header(); ?>
-  <!-- JS置于此处，方便JS重载 -->
-  <script src="<?php $this->options->themeUrl('js/vendor/jquery.min.js'); ?>"></script>
-  <script src="<?php $this->options->themeUrl('js/zoom-js/js/zoom.js'); ?>"></script>
-  <script src="<?php $this->options->themeUrl('js/vendor/bootstrap.js'); ?>"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <!-- <script src="<?php $this->options->themeUrl('js/vendor/video.js'); ?>"></script> -->
-  <script src="<?php $this->options->themeUrl('js/flat-ui.min.js'); ?>"></script>
-  <script src="<?php $this->options->themeUrl('js/prism.js'); ?>"></script>
-  <?php if ($GLOBALS['beta_MoreFunctions'] == 'on') : ?>
-    <script src="<?php $this->options->themeUrl('js/beta.js'); ?>"></script>
-    <!-- pjax实现 -->
-    <script src="<?php $this->options->themeUrl('js/jquery.pjax.js'); ?>"></script>
-    <!-- nprogress进度条 -->
-    <script src="<?php $this->options->themeUrl('js/nprogress.js'); ?>"></script>
-    <link href="<?php $this->options->themeUrl('css/nprogress.css'); ?>" rel="stylesheet">
-    <!-- 黑幕 -->
-    <link href="<?php $this->options->themeUrl('./css/beta.css'); ?>" rel="stylesheet">
-    <!-- 预加载 -->
-    <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
-    <!-- 网站LOGO -->
-    <link rel="shortcut icon" href="/usr/themes/Moricolor-for-Typecho/logo.ico" type="image/x-icon" />
-    <!-- MathJax渲染 -->
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
-    <script type="text/x-mathjax-config">
-		  MathJax.Hub.Config({
-			  elements:["all"],
-			  showProcessingMessages:false,
-			  messageStyle:"none",
-			  extensions:["tex2jax.js"],
-			  jax:["input/TeX","output/HTML-CSS"],
-			  tex2jax:{
-				  inlineMath:[["$","$"],["\\(","\\)"]],
-				  displayMath:[["$$","$$"],["\\[","\\]"]],
-				  processEscapes:true
-			  },
-			  "HTML-CSS":{availableFonts:["TeX"]}
-		  });
-    </script>
-  <?php endif; ?>
 </head>
 
 <body>

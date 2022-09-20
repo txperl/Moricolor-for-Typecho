@@ -1,19 +1,25 @@
-### UPDATE 2.1
+### UPDATE 2.2
 
 本次更新做出如下更改
 
 ##### 增加了
 
-- 登录功能
+- Ajax 评论
 
 ##### 修复了
 
-- 跟上了master的3个commits —— 一言能正常使用了
-- post页面无法正常打开的问题
+- Pjax 失效
 
 ##### 已知的问题
 
-- [遗留问题] 使用 pjax 后评论无法正常使用，可以配套 [AjaxComments - GitHub](https://github.com/visamz/AjaxComments) 使用 （欲了解更多请查看 v 1.0 的 commit ）
+- 开启 Ajax 评论需要关闭内置的 Typecho 反垃圾评论
+- 站点图标资源似乎无法连接
+
+------
+
+### 随便写写
+
+终于把 Ajax 评论拿下了，累死了。🐭🐭不怎么会写程序，但我还是挺会缝合的…… 接下来就是逢一个反垃圾评论吧。
 
 ------
 
@@ -35,12 +41,23 @@
 
 - [X] 测试 UPDATE 1 系列
 - [ ] 整合 [AllsitePasswd - GitHub](https://github.com/gogobody/AllsitePasswd) （全站加密）
-- [ ] 整合 [AjaxComments - GitHub](https://github.com/visamz/AjaxComments)  （Ajax评论）
+- [X] 整合 ajax 评论
 - [ ] 整合 [PartiallyPassword - GitHub](https://github.com/wuxianucw/PartiallyPassword) （加密部分段落）
 
 ------
 
 ### 历代更新
+
+##### UPDATE 2.1
+
+增加了
+
+- 登录功能
+
+修复了
+
+- 跟上了master的3个commits —— 一言能正常使用了
+- post页面无法正常打开的问题
 
 ##### v 2.0
 
@@ -121,9 +138,3 @@
 修复了
 
 - 表格显示不佳
-
-------
-
-### 写在最后
-
-没啥好说的
