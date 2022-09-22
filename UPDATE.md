@@ -1,52 +1,81 @@
-### UPDATE 2.2
+## UPDATE 3.0 THE LAST VERSION
 
 本次更新做出如下更改
 
 ##### 增加了
 
-- Ajax 评论
+- 使用GUI来编辑 `config.php`
+- 无刷音乐播放
 
 ##### 修复了
 
-- Pjax 失效
+- Pjax 关闭时返回顶部按钮的错误显示
+- 站点图标资源似乎无法连接
+- 优化 Pjax 框架
+
+##### 微调
+
+- `$GLOBALS['beta_MoreFunctions']` 已默认关闭
 
 ##### 已知的问题
 
 - 开启 Ajax 评论需要关闭内置的 Typecho 反垃圾评论
-- 站点图标资源似乎无法连接
+- 主题配色似乎无法更改
+- 似乎由于大量的本地 js 和 css 文件导致了页面有时候响应比较慢
+- 响应超时会让 Pjax 失效，页面此时会刷新
 
 ------
 
 ### 随便写写
 
-终于把 Ajax 评论拿下了，累死了。🐭🐭不怎么会写程序，但我还是挺会缝合的…… 接下来就是逢一个反垃圾评论吧。
+这是本🐭🐭缝合的最后一个功能增加地版本了。也就是指不再为其添加更多的功能了，因为其他的功能都可以直接通过插件达到不错的体验，各位可以按照自己的需求添加插件。但出现了BUG我一定会即时地修复的。
 
-------
+这个版本的发布确实比较匆忙，完全没有优化好。但因为马上要忙了，所以还是决定凑合着把这个坑先填上，后续再进行修改。
 
-### 测试进度
+另外我还会试着将主题进行压缩优化，同时改进程序结构，完成后再进行新版本发布。
 
-- 通过版本：
-  - v 1.0
-  - v 1.1
-  - v 1.3 —— 黑幕功能
-  - v 1.4 —— LOGO
+从1.0到3.0，我把一些常用的功能缝合了起来。相较于原版，缝合版本实现了：
 
-- 有Bug的版本 
-  - v 1.2
-  - v 1.5 —— 向上滚动
+- Pjax无刷浏览
+- Ajax评论
+- MathJax渲染支持
+- 表格样式的修复
+- 网站Logo
+- 底部登录
+- 黑幕功能
+- 快速回到顶部
+- 背景音乐播放
+- GUI编辑配置文件
 
-------
+一路走来，离不开开源社区以下各位的成果：
 
-### ~~画大饼~~计划中！UPDATE 2 系列 ！
+[Aplayer音乐插件](https://github.com/SatoSouta/Typecho-plugin-APlayerAtBottom)
+[Initial主题](https://github.com/jielive/initial)
+[萌娘百科](https://zh.moegirl.org.cn/MediaWiki:Mobile.css)
+[萌娘百科](https://zh.moegirl.org/MediaWiki:Common.css)
 
-- [X] 测试 UPDATE 1 系列
-- [ ] 整合 [AllsitePasswd - GitHub](https://github.com/gogobody/AllsitePasswd) （全站加密）
-- [X] 整合 ajax 评论
-- [ ] 整合 [PartiallyPassword - GitHub](https://github.com/wuxianucw/PartiallyPassword) （加密部分段落）
+最后，祝各位使用愉快😘（如果有人用的话）。
 
 ------
 
 ### 历代更新
+
+### UPDATE 2.2
+
+本次更新做出如下更改
+
+增加了
+
+- Ajax 评论
+
+修复了
+
+- Pjax 失效
+
+已知的问题
+
+- 开启 Ajax 评论需要关闭内置的 Typecho 反垃圾评论
+- 站点图标资源似乎无法连接
 
 ##### UPDATE 2.1
 

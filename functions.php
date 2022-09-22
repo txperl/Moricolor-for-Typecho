@@ -149,3 +149,6 @@ function change_fontweight($w)
     }
     return $rst;
 }
+function themeConfig($form) {
+    require_once("custom.php");
+}

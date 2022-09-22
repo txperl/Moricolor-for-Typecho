@@ -37,11 +37,15 @@ $index_img = $GLOBALS['index_Image'];
             'tag'       =>  _t('%s'),
             'author'    =>  _t('%s')
           ), '', ' - '); ?><?php $this->options->title(); ?></title>
+  <!-- 网站LOGO -->
+  <link rel="shortcut icon" href="<?php $this->options->themeUrl('logo.ico');?>">
 </head>
 
 <body>
 <div id="all">
-  <button onclick="topFunction()" id="totop">^</button>
+  <?php if ($GLOBALS['beta_MoreFunctions'] == 'on'): ?>
+    <button onclick="topFunction()" id="totop">^</button>
+  <?php endif; ?>
   <header>
     <?php if (!$this->is('post')) : ?>
       <div class="container" id="main">

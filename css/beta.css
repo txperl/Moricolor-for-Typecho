@@ -38,11 +38,3 @@
 .bc:active .new:hover, .bc .new:active, .new:active .bc {
     color: #BA0000 !important;
 }
-
-/*黑暗模式
-@media (prefers-color-scheme: dark) {
-  :root {
-
-  }
-}
-*/

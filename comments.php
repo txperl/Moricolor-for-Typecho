@@ -204,6 +204,7 @@ function threadedComments($comments, $options)
 </div>
 
 <script>
+// 代码改编自 https://github.com/jielive/initial
 function ac() {
         $body = $('html,body');
         var g = '.comment-list',

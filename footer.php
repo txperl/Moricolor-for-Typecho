@@ -24,17 +24,28 @@
     <!-- pjax实现 -->
     <script src="<?php $this->options->themeUrl('js/jquery.pjax.js'); ?>"></script>
     <script>
-    $(document).pjax('a[target!=_blank]', '#all', {fragment:'#all', timeout: 8000}); 
+    $(document).pjax('a[target!=_blank]', '#all', {fragment:'#all', timeout: 50000}); 
     $(document).on('pjax:send', function() {
       NProgress.start(); // NProgress进度条
+      if (window.aplayers) {
+        for (let i = 0; i < window.aplayers.length; i++) {
+            window.aplayers[i].destroy();
+        }
+        window.aplayers = [];
+      }
     }).on('submit', 'form', 'post', function(event){
-      $.pjax.submit(event, '#all',{fragment:'#all', timeout: 8000}); //为以上行动添加pjax支持
+      $.pjax.submit(event, '#all',{fragment:'#all', timeout: 50000}); //为以上行动添加pjax支持
     }).on('pjax:complete', function() {
       NProgress.done();
       respondId = '<?php $this->respondId(); ?>';
       if (typeof MathJax !== 'undefined'){
         MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
       } // MathJax重载
+      if (typeof aplayers !== 'undefined'){
+        for (var i = 0; i < aplayers.length; i++) {
+          try {aplayers[i].destroy()} catch(e){}
+        }
+      } //APlayer重载
     });
     </script>
     <!-- nprogress进度条 -->
@@ -44,8 +55,6 @@
     <link href="<?php $this->options->themeUrl('./css/beta.css'); ?>" rel="stylesheet">
     <!-- 预加载 -->
     <script src="//instant.page/5.1.0" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
-    <!-- 网站LOGO -->
-    <link rel="shortcut icon" href="/usr/themes/Moricolor-for-Typecho/logo.ico" type="image/x-icon" />
     <!-- MathJax渲染 -->
     <script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>
     <script type="text/x-mathjax-config">
@@ -183,12 +192,25 @@ if ($this->is('index')) {
 }
 ?>
 
+</div>
 <footer id="footer" class="container" style="background:rgba(255, 255, 255, 0);display:none;">
   <hr>
   <div style="text-align:center;padding-bottom:9px;">
     <p>&copy; <?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.
       <?php _e('Using <a target="_blank" href="http://www.typecho.org">Typecho</a> & <a target="_blank" href="https://github.com/txperl/Moricolor-for-Typecho">Moricolor</a>'); ?>.</p>
   </div>
+    <!--APlayer-->
+    <link href="<?php $this->options->themeUrl('./css/Aplayer.min.css'); ?>" rel="stylesheet">
+    <div id="aplayer"></div>
+    <script src="<?php $this->options->themeUrl('js/APlayer.min.js'); ?>"></script>
+    <?php
+      //展开设定
+      if($this->options->hide === '1'){
+        echo '<style>.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body{left:-68px}.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover{left:0}</style>';
+      }?>
+    <script type="application/javascript">
+    <?php $content = json_decode(file_get_contents(__DIR__ . '/aplayer.json'),true); $set = $content['settings']; echo 'const ap = new APlayer({container: document.getElementById(\'aplayer\'),lrcType:'.$set['lrc'].',autoplay:'.$set['autoplay'].',fixed:true,theme:\''.$set['theme'].'\',volume:'.$set['volume'].',order:\''.$set['order'].'\',audio:'.$content['data'].'});';?>
+    </script>
 </footer>
 <?php $this->footer(); ?>
 </body>
