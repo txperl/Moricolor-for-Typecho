@@ -5,20 +5,6 @@ require 'config.php';
 echo '<div class="container"><hr>';
 $data = srh();
 
-//twitter
-if ($GLOBALS['twitter'] != '') {
-    $twi = $data[0];
-    $twi = json_decode($twi, true);
-    $num = count($twi);
-
-    echo '<h5 style="font-weight:normal;margin-bottom:20px;margin-top:30px;">Twitter</h5>';
-    for ($i = 0; $i < $num; $i++) {
-        $text = $twi[$i]['text'];
-        $time = $twi[$i]['created_at'];
-        echo '<center><div class="tarc-t"><div class="tarc-tile">' . $text . '</div></div></center>';
-    }
-}
-
 //bangumi
 if ($GLOBALS['bangumi'] != '') {
     $bgm = $data[1];

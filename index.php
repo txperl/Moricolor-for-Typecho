@@ -5,8 +5,8 @@
  * 如同她的名字一样，给人以一种自然、恬静的文字阅读体验。
  * 本项目属于 ProjectNatureSimple
  * @package Moricolor
- * @author Trii Hsia 
- * @version Chapter I (v1.5)
+ * @author Trii Hsia
+ * @version Chapter I (v1.51)
  * @link https://yumoe.com/
  */
 
