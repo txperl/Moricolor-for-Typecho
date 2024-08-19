@@ -1,12 +1,13 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
+
 <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
-<script src="<?php $this->options->themeUrl('js/vendor/jquery.min.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('js/zoom-js/js/zoom.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('js/vendor/bootstrap.js'); ?>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.2.2/js/vendor/jquery.min.js"></script>
+<script src="<?php $this->options->themeUrl('js/bootstrap.js'); ?>"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<!-- <script src="<?php $this->options->themeUrl('js/vendor/video.js'); ?>"></script> -->
-<script src="<?php $this->options->themeUrl('js/flat-ui.min.js'); ?>"></script>
-<script src="<?php $this->options->themeUrl('js/prism.js'); ?>"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.2.2/js/flat-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/prism.min.js"></script>
+<script src="<?php $this->options->themeUrl('js/zoom.js'); ?>"></script>
+
 <script type="text/javascript">
   function getHitokoto() {
     $.ajax({

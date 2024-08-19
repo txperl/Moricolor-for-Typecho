@@ -38,17 +38,13 @@ $index_img = $GLOBALS['index_Image'];
             'author'    =>  _t('%s')
           ), '', ' - '); ?><?php $this->options->title(); ?></title>
 
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.2.2/css/vendor/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.2.2/css/flat-ui.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" rel="stylesheet">
+  <link href="<?php $this->options->themeUrl('./css/zoom.css'); ?>" rel="stylesheet">
   <link href="<?php $this->options->themeUrl('./css/mori.css'); ?>" rel="stylesheet">
-  <link href="<?php $this->options->themeUrl('./css/vendor/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
-  <link href="<?php $this->options->themeUrl('./css/flat-ui.min.css'); ?>" rel="stylesheet">
-  <link href="<?php $this->options->themeUrl('./css/prism.css'); ?>" rel="stylesheet">
-  <link href="<?php $this->options->themeUrl('./fonts/md/css/material-design-iconic-font.min.css'); ?>" rel="stylesheet">
-  <link href="<?php $this->options->themeUrl('./js/zoom-js/css/zoom.css'); ?>" rel="stylesheet">
-  <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
-  <!--[if lt IE 9]>
-      <script src="<?php $this->options->themeUrl('./js/vendor/html5shiv.js'); ?>"></script>
-      <script src="<?php $this->options->themeUrl('./js/vendor/respond.min.js'); ?>"></script>
-    <![endif]-->
+
   <?php $this->header(); ?>
 </head>
 
