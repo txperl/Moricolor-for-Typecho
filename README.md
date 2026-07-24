@@ -8,14 +8,22 @@
 > 欢迎体验使用
 
 
-***Demo1***: [Yumoe v2][1]
+Demo: [Yumoe v2][1]
 
-[MoriColor for Hexo](https://github.com/Anapopo/Moricolor-for-Hexo) by Anapopo.
+#### Forks
+
+- [MoriColor for Hexo](https://github.com/Anapopo/Moricolor-for-Hexo) by Anapopo.
+
+以上各版本由不同作者维护，感谢。
 
 ----------
 
 
 ### Moricolor Chapter I
+
+#### 预览
+
+![screenshot](screenshot.png)
 
 #### 细节
 
